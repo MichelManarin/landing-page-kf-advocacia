@@ -66,7 +66,7 @@ const Inss = () => {
                 className="inss-cta-button"
                 onClick={handleWhatsAppClick}
               >
-                <span>Quero fazer a verificação gratuita</span>
+                <span>Fale com um advogado</span>
                 <div className="inss-button-icon">
                   <FaArrowRight />
                 </div>

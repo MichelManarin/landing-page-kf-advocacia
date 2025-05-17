@@ -41,6 +41,7 @@ const Header = () => {
             <a href="/#servicos" className="nav-link">Serviços</a>
             <a href="/#sobre" className="nav-link">Sobre</a>
             <Link to="/inss" className="nav-link">INSS</Link>
+            <Link to="/blog" className="nav-link">Blog</Link>
             <a href="/#contato" className="nav-link">Contato</a>
           </nav>
 
@@ -96,12 +97,20 @@ const Header = () => {
             <span className="link-number">04</span>
             <span className="link-text">INSS</span>
           </Link>
+          <Link 
+            to="/blog" 
+            className="mobile-nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            <span className="link-number">05</span>
+            <span className="link-text">Blog</span>
+          </Link>
           <a 
             href="/#contato" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
-            <span className="link-number">05</span>
+            <span className="link-number">06</span>
             <span className="link-text">Contato</span>
           </a>
         </div>

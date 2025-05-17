@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://karolinefrancisco.com/sitemap.xml 
