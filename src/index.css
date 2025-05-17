@@ -1308,6 +1308,20 @@ footer {
   color: var(--gray-500);
 }
 
+.footer-bottom .developer-info strong {
+  color: var(--primary-color);
+}
+
+.footer-bottom .developer-info a {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-bottom .developer-info a:hover {
+  text-decoration: underline;
+}
+
 /* Scroll to top button */
 .scroll-top-button {
   position: fixed;
