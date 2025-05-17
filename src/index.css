@@ -1302,6 +1302,12 @@ footer {
   margin: 0;
 }
 
+.footer-bottom .developer-info {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
 /* Scroll to top button */
 .scroll-top-button {
   position: fixed;

@@ -168,6 +168,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <p>© {currentYear} Karoline Francisco Advocacia. Todos os direitos reservados.</p>
+          <p className="developer-info">Desenvolvido por Manatech | CNPJ 43.314.545/0001-85</p>
         </div>
       </div>
       
