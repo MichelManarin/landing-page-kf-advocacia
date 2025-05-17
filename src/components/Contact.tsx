@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const Contact = () => {
