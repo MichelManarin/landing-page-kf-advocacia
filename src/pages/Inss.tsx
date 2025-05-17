@@ -9,7 +9,10 @@ import {
   FaHandHoldingUsd, 
   FaHeartbeat, 
   FaUsers,
-  FaUserAlt
+  FaUserAlt,
+  FaBalanceScale,
+  FaHandshake,
+  FaTrophy
 } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
 
@@ -91,7 +94,7 @@ const Inss = () => {
                 <h2>Dra. Karoline Francisco</h2>
                 <p className="authority-subtitle">Especialista em Direito Previdenciário</p>
                 <p className="authority-description">
-                  Advogada especialista em direito previdenciário, com mais de 100 casos resolvidos com sucesso.
+                  Advogada especialista em direito previdenciário, com mais de 10 anos de experiência profissional.
                   Atuo para garantir que você receba todos os seus direitos junto ao INSS.
                 </p>
               </div>
@@ -218,58 +221,56 @@ const Inss = () => {
           </div>
         </section>
 
-        {/* Seção 6 - Prova social */}
-        <section className="inss-testimonials" ref={section6Ref}>
+        {/* Seção 6 - Por que nos escolher */}
+        <section className="inss-why-choose-us" ref={section6Ref}>
           <div className="container">
             <motion.div 
-              className="testimonials-content"
+              className="why-choose-content"
               initial={{ opacity: 0, y: 50 }}
               animate={section6InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="testimonials-title">Quem já passou por aqui disse…</h2>
-              <div className="testimonials-grid">
-                <div className="testimonial-card">
-                  <div className="testimonial-quote">"</div>
-                  <p className="testimonial-text">
-                    Eu não sabia que tinha direito a uma revisão do meu benefício. Graças à análise feita pela Dra. Karoline, 
-                    consegui um aumento significativo na minha aposentadoria.
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">MT</div>
-                    <div className="author-info">
-                      <h4>Maria T.</h4>
-                      <p>Florianópolis, SC</p>
-                    </div>
+              <h2 className="why-choose-title">Por que escolher nosso escritório?</h2>
+              <div className="why-choose-grid">
+                <div className="why-choose-card">
+                  <div className="why-choose-icon">
+                    <FaBalanceScale />
                   </div>
+                  <h3>Experiência Especializada</h3>
+                  <p>
+                    Conhecimento técnico profundo em direito previdenciário e larga experiência
+                    em casos complexos junto ao INSS.
+                  </p>
                 </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-quote">"</div>
-                  <p className="testimonial-text">
-                    Meu pedido de auxílio-doença havia sido negado pelo INSS. Com o apoio jurídico especializado,
-                    conseguimos reverter a decisão e ainda receber os valores atrasados.
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">JS</div>
-                    <div className="author-info">
-                      <h4>João S.</h4>
-                      <p>São José, SC</p>
-                    </div>
+                <div className="why-choose-card">
+                  <div className="why-choose-icon">
+                    <FaHandshake />
                   </div>
+                  <h3>Atendimento Humanizado</h3>
+                  <p>
+                    Tratamos cada cliente de forma única, com empatia e dedicação para 
+                    entender completamente suas necessidades.
+                  </p>
                 </div>
-                <div className="testimonial-card">
-                  <div className="testimonial-quote">"</div>
-                  <p className="testimonial-text">
-                    Após anos tentando sozinha, finalmente consegui o BPC para meu filho com deficiência.
-                    O atendimento foi humano e eficiente do início ao fim.
-                  </p>
-                  <div className="testimonial-author">
-                    <div className="author-avatar">CR</div>
-                    <div className="author-info">
-                      <h4>Cristina R.</h4>
-                      <p>Palhoça, SC</p>
-                    </div>
+                <div className="why-choose-card">
+                  <div className="why-choose-icon">
+                    <FaFileAlt />
                   </div>
+                  <h3>Transparência Total</h3>
+                  <p>
+                    Comunicação clara desde o início, com explicações detalhadas sobre 
+                    seu caso, possibilidades e custos envolvidos.
+                  </p>
+                </div>
+                <div className="why-choose-card">
+                  <div className="why-choose-icon">
+                    <FaTrophy />
+                  </div>
+                  <h3>Resultados Comprovados</h3>
+                  <p>
+                    Histórico de sucesso em conquistar direitos e valores atrasados para 
+                    nossos clientes em todo o estado.
+                  </p>
                 </div>
               </div>
             </motion.div>
