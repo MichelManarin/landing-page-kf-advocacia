@@ -67,7 +67,12 @@ const Footer = () => {
           <div className="footer-grid">
             <div className="footer-about">
               <div className="footer-logo-container">
-                <img src={logoSrc} alt="Karoline Francisco Advogada" className="footer-logo" />
+                <img 
+                  src={logoSrc} 
+                  alt="Karoline Francisco Advogada em Orleans - Serviços Jurídicos Especializados" 
+                  title="Escritório de Advocacia em Orleans - Karoline Francisco" 
+                  className="footer-logo" 
+                />
                 <div className="footer-logo-text">
                   <h2>Karoline Francisco</h2>
                   <p>ADVOGADA</p>
@@ -100,21 +105,22 @@ const Footer = () => {
             <div className="footer-links">
               <h3>Áreas de Atuação</h3>
               <ul>
-                <li><a href="#servicos">Direito Previdenciário</a></li>
-                <li><Link to="/inss">Aposentadorias INSS</Link></li>
-                <li><a href="#servicos">Direito de Família</a></li>
-                <li><a href="#servicos">Ações de Cobrança</a></li>
+                <li><a href="#servicos" title="Direito Previdenciário em Orleans">Direito Previdenciário</a></li>
+                <li><Link to="/inss" title="Aposentadorias e Benefícios INSS em Orleans">Aposentadorias INSS</Link></li>
+                <li><a href="#servicos" title="Advogada para Direito de Família em Orleans">Direito de Família</a></li>
+                <li><a href="#servicos" title="Ações de Cobrança em Orleans">Ações de Cobrança</a></li>
+                <li><Link to="/advogada-orleans" title="Advogada especializada em Orleans">Advogada em Orleans</Link></li>
               </ul>
             </div>
             
             <div className="footer-links">
               <h3>Links Rápidos</h3>
               <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><Link to="/blog">Blog</Link></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><Link to="/" title="Página inicial - Advocacia em Orleans">Home</Link></li>
+                <li><a href="#sobre" title="Sobre Karoline Francisco - Advogada em Orleans">Sobre</a></li>
+                <li><a href="#servicos" title="Serviços jurídicos em Orleans">Serviços</a></li>
+                <li><Link to="/blog" title="Blog jurídico - Advogada em Orleans">Blog</Link></li>
+                <li><a href="#contato" title="Entre em contato com advogada em Orleans">Contato</a></li>
               </ul>
             </div>
             
@@ -127,6 +133,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="social-icon-link"
+                  title="Karoline Francisco - Advogada em Orleans no LinkedIn"
                 >
                   <div className="social-icon">
                     <FaLinkedin />
@@ -138,6 +145,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="social-icon-link"
+                  title="Siga a Advogada Karoline Francisco no Instagram"
                 >
                   <div className="social-icon">
                     <FaInstagram />
@@ -149,6 +157,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
                   className="social-icon-link"
+                  title="Fale com a Advogada em Orleans pelo WhatsApp"
                 >
                   <div className="social-icon whatsapp">
                     <FaWhatsapp />

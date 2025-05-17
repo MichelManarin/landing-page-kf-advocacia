@@ -107,7 +107,11 @@ function Blog() {
                 {featuredPosts.map(post => (
                   <article key={post.id} className="featured-card">
                     <div className="image-container">
-                      <img src={post.image} alt={post.title} />
+                      <img 
+                        src={post.image} 
+                        alt={`Artigo em destaque: ${post.title} - Blog jurídico em Orleans SC`} 
+                        title={`${post.title} | Artigo em destaque sobre ${post.category}`} 
+                      />
                     </div>
                     <div className="post-content">
                       <span className="category">{post.category}</span>
@@ -141,7 +145,11 @@ function Blog() {
                 {filteredPosts.map(post => (
                   <article key={post.id} className="post-card">
                     <div className="image-container">
-                      <img src={post.image} alt={post.title} />
+                      <img 
+                        src={post.image} 
+                        alt={`${post.title} - Artigo sobre ${post.category} em Orleans SC`} 
+                        title={`${post.title} | Blog Jurídico Karoline Francisco`} 
+                      />
                       <span className="category">{post.category}</span>
                     </div>
                     <div className="post-content">

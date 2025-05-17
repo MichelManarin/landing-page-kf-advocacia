@@ -28,7 +28,11 @@ const BlogPreview = () => {
             {recentPosts.map(post => (
               <article key={post.id} className="blog-preview-card">
                 <div className="blog-preview-image">
-                  <img src={post.image} alt={post.title} />
+                  <img 
+                    src={post.image} 
+                    alt={`${post.title} - Artigo jurídico por Advogada em Orleans SC`} 
+                    title={`${post.title} | Advocacia especializada em ${post.category}`} 
+                  />
                   <span className="blog-preview-category">{post.category}</span>
                 </div>
                 <div className="blog-preview-content">

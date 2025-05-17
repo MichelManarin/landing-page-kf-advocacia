@@ -28,7 +28,12 @@ const Header = () => {
         <div className="navbar">
           <div className="logo-container">
             <Link to="/" className="logo-wrapper">
-              <img src={logoSrc} alt="Karoline Francisco Advogada" className="logo" />
+              <img 
+                src={logoSrc} 
+                alt="Karoline Francisco Advogada em Orleans - Especialista em Direito Previdenciário e Família" 
+                title="Karoline Francisco - Advogada em Orleans SC" 
+                className="logo" 
+              />
             </Link>
             <div className="logo-text">
               <h1 className="brand-name">Karoline Francisco</h1>

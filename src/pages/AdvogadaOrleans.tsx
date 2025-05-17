@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { FaBalanceScale, FaUserFriends, FaFileInvoiceDollar, FaMapMarkerAlt, FaCheck, FaWhatsapp } from 'react-icons/fa';
+import { FaBalanceScale, FaUserFriends, FaFileInvoiceDollar, FaMapMarkerAlt, FaCheck, FaWhatsapp, FaQuestionCircle } from 'react-icons/fa';
 
 const AdvogadaOrleans = () => {
   useEffect(() => {
@@ -132,6 +132,64 @@ const AdvogadaOrleans = () => {
           </div>
         </section>
         
+        {/* FAQ Section */}
+        <section className="faq-section">
+          <div className="container">
+            <h2>Perguntas Frequentes sobre Advogados em Orleans</h2>
+            <div className="faq-container">
+              <div className="faq-item">
+                <div className="faq-question">
+                  <FaQuestionCircle className="faq-icon" />
+                  <h3>Quais são os tribunais que atendem a comarca de Orleans-SC?</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>Orleans é atendida pelo Fórum da Comarca de Orleans, vinculado ao Tribunal de Justiça de Santa Catarina. Para questões trabalhistas, os processos são encaminhados para a Vara do Trabalho de Criciúma e para questões federais, o Juizado Especial Federal e a Justiça Federal de Criciúma são responsáveis pelos processos.</p>
+                </div>
+              </div>
+              
+              <div className="faq-item">
+                <div className="faq-question">
+                  <FaQuestionCircle className="faq-icon" />
+                  <h3>Quanto custa um advogado em Orleans para causas previdenciárias?</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>Os honorários para causas previdenciárias em Orleans geralmente seguem a tabela da OAB/SC, podendo variar entre 10% a 30% do valor conquistado ao final do processo. Em nosso escritório, oferecemos a primeira consulta gratuita para avaliação do caso e apresentação dos custos de forma transparente.</p>
+                </div>
+              </div>
+              
+              <div className="faq-item">
+                <div className="faq-question">
+                  <FaQuestionCircle className="faq-icon" />
+                  <h3>Quais documentos devo levar em uma primeira consulta com advogado em Orleans?</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>Para a primeira consulta, recomenda-se levar seus documentos pessoais (RG, CPF), comprovante de residência em Orleans ou região, e documentos específicos relacionados ao seu caso. Para questões previdenciárias, traga seu CNIS e carta de concessão de benefícios; para direito de família, documentos que comprovem o matrimônio ou união estável; para ações de cobrança, os contratos e comprovantes de pagamentos ou inadimplência.</p>
+                </div>
+              </div>
+              
+              <div className="faq-item">
+                <div className="faq-question">
+                  <FaQuestionCircle className="faq-icon" />
+                  <h3>Atende outras cidades além de Orleans?</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>Sim, além de Orleans, atendemos clientes de cidades vizinhas como Lauro Müller, Urussanga, Braço do Norte, São Ludgero e Grão Pará. Oferecemos também atendimento remoto para todo o estado de Santa Catarina em casos específicos.</p>
+                </div>
+              </div>
+              
+              <div className="faq-item">
+                <div className="faq-question">
+                  <FaQuestionCircle className="faq-icon" />
+                  <h3>Qual é o tempo médio de uma causa previdenciária em Orleans?</h3>
+                </div>
+                <div className="faq-answer">
+                  <p>O tempo médio para resolução de causas previdenciárias em Orleans varia entre 1 a 3 anos, dependendo da complexidade do caso, da necessidade de perícias médicas e da atual demanda processual da Justiça Federal de Criciúma, que atende a região. Processos administrativos junto ao INSS em Orleans podem ser resolvidos em prazos menores.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
         {/* Área de Atuação */}
         <section className="area-atuacao-section">
           <div className="container">
@@ -167,9 +225,6 @@ const AdvogadaOrleans = () => {
                   <FaWhatsapp size={20} className="button-icon" />
                   Fale com um advogado
                 </button>
-                <Link to="/contato" className="cta-button secondary">
-                  Ver formas de contato
-                </Link>
               </div>
             </div>
           </div>
@@ -230,7 +285,80 @@ const AdvogadaOrleans = () => {
                 }
               ]
             },
-            "keywords": "advogada em orleans, advogado orleans sc, direito previdenciário orleans, advogada família orleans"
+            "keywords": "advogada em orleans, advogado orleans sc, direito previdenciário orleans, advogada família orleans",
+            "localBusinessPriority": "Orleans Local Business" // sinal para o Google de que é um negócio local
+          })
+        }} />
+        
+        {/* Rich snippets para SEO - FAQ */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quais são os tribunais que atendem a comarca de Orleans-SC?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Orleans é atendida pelo Fórum da Comarca de Orleans, vinculado ao Tribunal de Justiça de Santa Catarina. Para questões trabalhistas, os processos são encaminhados para a Vara do Trabalho de Criciúma e para questões federais, o Juizado Especial Federal e a Justiça Federal de Criciúma são responsáveis pelos processos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quanto custa um advogado em Orleans para causas previdenciárias?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Os honorários para causas previdenciárias em Orleans geralmente seguem a tabela da OAB/SC, podendo variar entre 10% a 30% do valor conquistado ao final do processo. Em nosso escritório, oferecemos a primeira consulta gratuita para avaliação do caso e apresentação dos custos de forma transparente."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais documentos devo levar em uma primeira consulta com advogado em Orleans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Para a primeira consulta, recomenda-se levar seus documentos pessoais (RG, CPF), comprovante de residência em Orleans ou região, e documentos específicos relacionados ao seu caso. Para questões previdenciárias, traga seu CNIS e carta de concessão de benefícios; para direito de família, documentos que comprovem o matrimônio ou união estável; para ações de cobrança, os contratos e comprovantes de pagamentos ou inadimplência."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Atende outras cidades além de Orleans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim, além de Orleans, atendemos clientes de cidades vizinhas como Lauro Müller, Urussanga, Braço do Norte, São Ludgero e Grão Pará. Oferecemos também atendimento remoto para todo o estado de Santa Catarina em casos específicos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual é o tempo médio de uma causa previdenciária em Orleans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O tempo médio para resolução de causas previdenciárias em Orleans varia entre 1 a 3 anos, dependendo da complexidade do caso, da necessidade de perícias médicas e da atual demanda processual da Justiça Federal de Criciúma, que atende a região. Processos administrativos junto ao INSS em Orleans podem ser resolvidos em prazos menores."
+                }
+              }
+            ]
+          })
+        }} />
+        
+        {/* Rich snippets para SEO - Breadcrumbs */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://karolinefrancisco.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Advogada em Orleans",
+                "item": "https://karolinefrancisco.com/advogada-orleans"
+              }
+            ]
           })
         }} />
       </main>

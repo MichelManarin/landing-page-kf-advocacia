@@ -29,7 +29,12 @@ function Sobre() {
           <div className="container">
             <div className="imagem-perfil">
               {/* Imagem da advogada */}
-              <div className="img-placeholder">Foto da Advogada</div>
+              <img 
+                src="/perfil.jpg" 
+                alt="Dra. Karoline Francisco - Advogada em Orleans especializada em Direito Previdenciário e Família" 
+                title="Karoline Francisco - OAB/SC 64.256 - Advocacia em Orleans" 
+                className="advogada-foto" 
+              />
             </div>
             
             <div className="bio-advogada">

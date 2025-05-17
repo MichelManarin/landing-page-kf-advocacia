@@ -125,7 +125,11 @@ function BlogPost() {
             
             {/* Imagem destacada */}
             <div className="featured-image">
-              <img src={post.image} alt={post.title} />
+              <img 
+                src={post.image} 
+                alt={`Artigo jurídico: ${post.title} - Advocacia em Orleans | Karoline Francisco`} 
+                title={`${post.title} | Blog Jurídico - Advogada em Orleans`} 
+              />
             </div>
             
             {/* Conteúdo do post */}
@@ -149,7 +153,11 @@ function BlogPost() {
             {/* Autor */}
             <div className="post-author">
               <div className="author-avatar">
-                <img src="/author.jpg" alt={post.author} />
+                <img 
+                  src="/author.jpg" 
+                  alt="Dra. Karoline Francisco - Advogada em Orleans SC" 
+                  title="Karoline Francisco - Autora do Blog Jurídico" 
+                />
               </div>
               <div className="author-bio">
                 <h3>{post.author}</h3>
@@ -176,7 +184,11 @@ function BlogPost() {
                 {relatedPosts.map(post => (
                   <article key={post.id} className="related-card">
                     <div className="image-container">
-                      <img src={post.image} alt={post.title} />
+                      <img 
+                        src={post.image} 
+                        alt={`Artigo relacionado: ${post.title} - Consultoria jurídica em Orleans SC`} 
+                        title={`${post.title} | Artigos jurídicos relacionados`} 
+                      />
                       <span className="category">{post.category}</span>
                     </div>
                     <div className="post-content">
