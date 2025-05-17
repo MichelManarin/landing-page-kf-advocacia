@@ -15,6 +15,10 @@
   --green-50: #f0fdf4;
   --green-600: #16a34a;
   --green-700: #15803d;
+  --primary-color-light: #e5d2d2;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-muted: #666;
 }
 
 * {
@@ -2911,4 +2915,350 @@ footer {
 
 .about-cta-button:hover .about-cta-arrow {
   transform: translateX(5px);
+}
+
+/* =========================================
+   Página Advogada em Orleans
+   ========================================= */
+
+.advogada-orleans-page .hero-section {
+  background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--primary-color) 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.advogada-orleans-page .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.advogada-orleans-page .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.advogada-orleans-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.advogada-orleans-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.advogada-orleans-page .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orleans-services-section {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.orleans-services-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.orleans-services-section .section-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.orleans-services-section .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.orleans-services-section .service-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.orleans-services-section .service-card:hover {
+  transform: translateY(-5px);
+}
+
+.orleans-services-section .service-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.orleans-services-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.orleans-services-section .service-card p {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.orleans-services-section .service-list {
+  list-style: none;
+  padding: 0;
+}
+
+.orleans-services-section .service-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.orleans-services-section .check-icon {
+  color: var(--primary-color);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.diferenciais-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.diferenciais-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--secondary-color);
+}
+
+.diferenciais-section .diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.diferenciais-section .diferencial-card {
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: 25px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.diferenciais-section .diferencial-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.diferenciais-section .diferencial-card p {
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.area-atuacao-section {
+  padding: 80px 0;
+  background: linear-gradient(to right, var(--bg-light) 30%, white 30%);
+}
+
+.area-atuacao-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--secondary-color);
+}
+
+.area-atuacao-section .area-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.area-atuacao-section .area-text {
+  max-width: 600px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.area-atuacao-section .area-text p {
+  margin-bottom: 20px;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.area-atuacao-section .area-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.area-atuacao-section .area-list li {
+  display: flex;
+  align-items: center;
+  color: var(--text-dark);
+}
+
+.area-atuacao-section .map-icon {
+  color: var(--primary-color);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.area-atuacao-section .area-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.orleans-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  color: white;
+}
+
+.orleans-cta-section .cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.orleans-cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.orleans-cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.orleans-cta-section .cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.orleans-cta-section .cta-button {
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.orleans-cta-section .cta-button.primary {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+.orleans-cta-section .cta-button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.orleans-cta-section .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.orleans-cta-section .button-icon {
+  margin-right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .advogada-orleans-page h1 {
+    font-size: 2.2rem;
+  }
+  
+  .advogada-orleans-page h2 {
+    font-size: 1.5rem;
+  }
+  
+  .advogada-orleans-page .hero-content p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .orleans-services-section h2,
+  .diferenciais-section h2,
+  .area-atuacao-section h2,
+  .orleans-cta-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .area-atuacao-section {
+    background: var(--bg-light);
+  }
+  
+  .area-atuacao-section .area-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .orleans-cta-section .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .orleans-cta-section .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.advogada-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.advogada-link:hover {
+  border-bottom-color: var(--primary-color);
 }
