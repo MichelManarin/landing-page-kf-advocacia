@@ -26,19 +26,6 @@ interface RelatedPost {
   image: string;
 }
 
-// Simulação de post vazio
-const emptyPost: BlogPost = {
-  id: 0,
-  slug: '',
-  title: '',
-  date: '',
-  author: '',
-  category: '',
-  image: '',
-  content: '',
-  tags: []
-};
-
 // Posts relacionados vazios
 const relatedPosts: RelatedPost[] = [];
 
