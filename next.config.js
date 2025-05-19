@@ -22,6 +22,7 @@ const nextConfig = {
         ],
         destination: 'https://karolinefrancisco.com/:path*',
         permanent: true,
+        basePath: false,
       },
       // Redireciona URLs de formato antigo para o novo (exemplo)
       {
