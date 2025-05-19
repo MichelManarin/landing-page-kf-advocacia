@@ -8,7 +8,7 @@ import {
   FaClock,
   FaChevronUp
 } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import logoSrc from '../assets/logo.png';
 
@@ -68,10 +68,12 @@ const Footer = () => {
             <div className="footer-about">
               <div className="footer-logo-container">
                 <img 
-                  src={logoSrc} 
+                  src={logoSrc.src} 
                   alt="Karoline Francisco Advogada em Orleans - Serviços Jurídicos Especializados" 
                   title="Escritório de Advocacia em Orleans - Karoline Francisco" 
                   className="footer-logo" 
+                  width={50}
+                  height={50}
                 />
                 <div className="footer-logo-text">
                   <h2>Karoline Francisco</h2>
@@ -105,22 +107,22 @@ const Footer = () => {
             <div className="footer-links">
               <h3>Áreas de Atuação</h3>
               <ul>
-                <li><a href="#servicos" title="Direito Previdenciário em Orleans">Direito Previdenciário</a></li>
-                <li><Link to="/inss" title="Aposentadorias e Benefícios INSS em Orleans">Aposentadorias INSS</Link></li>
-                <li><a href="#servicos" title="Advogada para Direito de Família em Orleans">Direito de Família</a></li>
-                <li><a href="#servicos" title="Ações de Cobrança em Orleans">Ações de Cobrança</a></li>
-                <li><Link to="/advogada-orleans" title="Advogada especializada em Orleans">Advogada em Orleans</Link></li>
+                <li><Link href="/#servicos" title="Direito Previdenciário em Orleans">Direito Previdenciário</Link></li>
+                <li><Link href="/inss" title="Aposentadorias e Benefícios INSS em Orleans">Aposentadorias INSS</Link></li>
+                <li><Link href="/#servicos" title="Advogada para Direito de Família em Orleans">Direito de Família</Link></li>
+                <li><Link href="/#servicos" title="Ações de Cobrança em Orleans">Ações de Cobrança</Link></li>
+                <li><Link href="/advogada-orleans" title="Advogada especializada em Orleans">Advogada em Orleans</Link></li>
               </ul>
             </div>
             
             <div className="footer-links">
               <h3>Links Rápidos</h3>
               <ul>
-                <li><Link to="/" title="Página inicial - Advocacia em Orleans">Home</Link></li>
-                <li><a href="#sobre" title="Sobre Karoline Francisco - Advogada em Orleans">Sobre</a></li>
-                <li><a href="#servicos" title="Serviços jurídicos em Orleans">Serviços</a></li>
-                <li><Link to="/blog" title="Blog jurídico - Advogada em Orleans">Blog</Link></li>
-                <li><a href="#contato" title="Entre em contato com advogada em Orleans">Contato</a></li>
+                <li><Link href="/" title="Página inicial - Advocacia em Orleans">Home</Link></li>
+                <li><Link href="/#sobre" title="Sobre Karoline Francisco - Advogada em Orleans">Sobre</Link></li>
+                <li><Link href="/#servicos" title="Serviços jurídicos em Orleans">Serviços</Link></li>
+                <li><Link href="/blog" title="Blog jurídico - Advogada em Orleans">Blog</Link></li>
+                <li><Link href="/#contato" title="Entre em contato com advogada em Orleans">Contato</Link></li>
               </ul>
             </div>
             

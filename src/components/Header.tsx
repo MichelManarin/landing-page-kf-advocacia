@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 import logoSrc from '../assets/logo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,18 +24,24 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isActive = (path: string) => {
+    return router.pathname === path;
+  };
+
   return (
     <header className={scrolled ? 'scrolled' : ''}>
       <div className="navbar-bg"></div>
       <div className="container">
         <div className="navbar">
           <div className="logo-container">
-            <Link to="/" className="logo-wrapper">
+            <Link href="/" className="logo-wrapper">
               <img 
-                src={logoSrc} 
+                src={logoSrc.src} 
                 alt="Karoline Francisco Advogada em Orleans - Especialista em Direito Previdenciário e Família" 
                 title="Karoline Francisco - Advogada em Orleans SC" 
                 className="logo" 
+                width={80}
+                height={80}
               />
             </Link>
             <div className="logo-text">
@@ -42,12 +51,12 @@ const Header = () => {
           </div>
 
           <nav className="desktop-menu">
-            <Link to="/" className="nav-link">Home</Link>
-            <a href="/#servicos" className="nav-link">Serviços</a>
-            <a href="/#sobre" className="nav-link">Sobre</a>
-            <Link to="/inss" className="nav-link">INSS</Link>
-            <Link to="/blog" className="nav-link">Blog</Link>
-            <a href="/#contato" className="nav-link">Contato</a>
+            <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
+            <Link href="/#servicos" className="nav-link">Serviços</Link>
+            <Link href="/#sobre" className="nav-link">Sobre</Link>
+            <Link href="/inss" className={`nav-link ${isActive('/inss') ? 'active' : ''}`}>INSS</Link>
+            <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active' : ''}`}>Blog</Link>
+            <Link href="/#contato" className="nav-link">Contato</Link>
           </nav>
 
           <div className="mobile-menu-button">
@@ -71,31 +80,31 @@ const Header = () => {
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-menu-container">
           <Link 
-            to="/" 
+            href="/" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
             <span className="link-number">01</span>
             <span className="link-text">Home</span>
           </Link>
-          <a 
+          <Link 
             href="/#servicos" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
             <span className="link-number">02</span>
             <span className="link-text">Serviços</span>
-          </a>
-          <a 
+          </Link>
+          <Link 
             href="/#sobre" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
             <span className="link-number">03</span>
             <span className="link-text">Sobre</span>
-          </a>
+          </Link>
           <Link 
-            to="/inss" 
+            href="/inss" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
@@ -103,21 +112,21 @@ const Header = () => {
             <span className="link-text">INSS</span>
           </Link>
           <Link 
-            to="/blog" 
+            href="/blog" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
             <span className="link-number">05</span>
             <span className="link-text">Blog</span>
           </Link>
-          <a 
+          <Link 
             href="/#contato" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
             <span className="link-number">06</span>
             <span className="link-text">Contato</span>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

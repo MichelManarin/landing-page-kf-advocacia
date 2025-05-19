@@ -1,6 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { 
   FaWhatsapp, 
   FaCheck, 
@@ -15,6 +13,9 @@ import {
   FaTrophy
 } from 'react-icons/fa';
 import { motion, useInView } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '@/components/Layout';
+import '../styles/Inss.css';
 
 const Inss = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,13 +43,29 @@ const Inss = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Efeito para animação ao carregar a página
+    const heroContent = document.querySelector('.inss-hero-content');
+    if (heroContent) {
+      setTimeout(() => {
+        heroContent.classList.add('visible');
+      }, 100);
+    }
+  }, []);
+
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/5548991472830?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20verificar%20meus%20direitos%20junto%20ao%20INSS.', '_blank');
   };
 
   return (
-    <>
-      <Header />
+    <Layout>
+      <Head>
+        <title>Aposentadoria e Benefícios INSS | Karoline Francisco Advogada</title>
+        <meta
+          name="description"
+          content="Assessoria jurídica especializada em Direito Previdenciário. Aposentadoria, auxílio-doença, BPC/LOAS e outros benefícios do INSS."
+        />
+      </Head>
       <main className="inss-page">
         {/* Seção 1 - Headline de impacto */}
         <section className="inss-hero">
@@ -303,8 +320,7 @@ const Inss = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

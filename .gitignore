@@ -1,35 +1,63 @@
-# Logs
-logs
-*.log
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+*.pem
+
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea
+.vscode
+
+# Logs
+logs
+*.log
 pnpm-debug.log*
 lerna-debug.log*
 
 # Dependency directories
-node_modules
 dist
 dist-ssr
 *.local
 
-# Build outputs
-build
-coverage
-
 # Environment files
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
 # TypeScript cache
-*.tsbuildinfo
 node_modules/.tmp
 
 # Testing
-/coverage
 .nyc_output
 
 # Editor directories and files
@@ -38,7 +66,6 @@ node_modules/.tmp
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-.idea
 .DS_Store
 *.suo
 *.ntvs*
@@ -47,8 +74,6 @@ node_modules/.tmp
 *.sw?
 
 # OS generated files
-.DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes

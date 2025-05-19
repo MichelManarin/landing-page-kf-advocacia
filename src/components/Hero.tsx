@@ -1,6 +1,6 @@
 import { FaWhatsapp } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +33,7 @@ const Hero = () => {
               Proteção jurídica <span className="highlight">especializada</span>
             </h1>
             <p className="text-lg text-gray-700 mb-8">
-              Soluções jurídicas personalizadas para seus direitos no INSS, Direito de Família e Ações de Cobrança. <Link to="/advogada-orleans" className="advogada-link">Advogada em Orleans-SC</Link> com atendimento personalizado.
+              Soluções jurídicas personalizadas para seus direitos no INSS, Direito de Família e Ações de Cobrança. <Link href="/advogada-orleans" className="advogada-link">Advogada em Orleans-SC</Link> com atendimento personalizado.
             </p>
             
             <button 

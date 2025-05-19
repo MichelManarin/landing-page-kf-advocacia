@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import './BlogPost.css';
@@ -30,12 +31,14 @@ interface RelatedPost {
 const relatedPosts: RelatedPost[] = [];
 
 function BlogPost() {
-  const { slug } = useParams();
+  const router = useRouter();
+  const { slug } = router.query;
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
   
   useEffect(() => {
+    if (!slug) return; // Esperar até que o slug esteja disponível
+
     // Em uma implementação real, você buscaria o post do backend usando o slug
     console.log('Post slug:', slug);
     
@@ -87,7 +90,7 @@ function BlogPost() {
             <h1>Artigo não encontrado</h1>
             <p>O artigo que você está procurando ainda não está disponível ou foi removido.</p>
             <div className="post-not-found-actions">
-              <button onClick={() => navigate('/blog')} className="back-button">
+              <button onClick={() => router.push('/blog')} className="back-button">
                 Voltar para o Blog
               </button>
             </div>
@@ -107,8 +110,8 @@ function BlogPost() {
             {/* Breadcrumbs para SEO */}
             <nav className="breadcrumbs" aria-label="breadcrumb">
               <ol>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
                 <li aria-current="page">{post.title}</li>
               </ol>
             </nav>
@@ -144,7 +147,7 @@ function BlogPost() {
               <ul>
                 {post.tags.map((tag, index) => (
                   <li key={index}>
-                    <Link to={`/blog/tag/${tag.replace(/\s+/g, '-')}`}>{tag}</Link>
+                    <Link href={`/blog/tag/${tag.replace(/\s+/g, '-')}`}>{tag}</Link>
                   </li>
                 ))}
               </ul>
@@ -162,7 +165,7 @@ function BlogPost() {
               <div className="author-bio">
                 <h3>{post.author}</h3>
                 <p>Advogada especializada em Direito Previdenciário em Orleans-SC. OAB/SC 12345.</p>
-                <Link to="/sobre" className="more-about">Saiba mais</Link>
+                <Link href="/sobre" className="more-about">Saiba mais</Link>
               </div>
             </div>
             
@@ -170,7 +173,7 @@ function BlogPost() {
             <div className="post-cta">
               <h3>Precisa de assistência com sua aposentadoria em Orleans?</h3>
               <p>Entre em contato para uma consulta personalizada sobre seus direitos previdenciários.</p>
-              <Link to="/contato" className="cta-button">Fale com um advogado</Link>
+              <Link href="/contato" className="cta-button">Fale com um advogado</Link>
             </div>
           </div>
         </article>
@@ -193,10 +196,10 @@ function BlogPost() {
                     </div>
                     <div className="post-content">
                       <h3>
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                       </h3>
                       <p>{post.excerpt}</p>
-                      <Link to={`/blog/${post.slug}`} className="read-more">Ler mais</Link>
+                      <Link href={`/blog/${post.slug}`} className="read-more">Ler mais</Link>
                     </div>
                   </article>
                 ))}
@@ -267,6 +270,6 @@ function BlogPost() {
       <Footer />
     </>
   );
-}
+};
 
 export default BlogPost; 

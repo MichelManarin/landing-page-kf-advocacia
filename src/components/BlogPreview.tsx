@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './BlogPreview.css';
 
 // Definir interface para o tipo de post
@@ -37,10 +37,10 @@ const BlogPreview = () => {
                 </div>
                 <div className="blog-preview-content">
                   <h3 className="blog-preview-title">
-                    <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                    <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
                   <p className="blog-preview-excerpt">{post.excerpt}</p>
-                  <Link to={`/blog/${post.slug}`} className="blog-preview-link">
+                  <Link href={`/blog/${post.slug}`} className="blog-preview-link">
                     Ler mais
                   </Link>
                 </div>
@@ -54,10 +54,10 @@ const BlogPreview = () => {
         )}
         
         <div className="blog-preview-cta">
-          <Link to="/blog" className="blog-preview-button">
+          <Link href="/blog" className="blog-preview-button">
             Ver todos os artigos
           </Link>
-          <Link to="/contato" className="blog-preview-button blog-preview-button-contact">
+          <Link href="/contato" className="blog-preview-button blog-preview-button-contact">
             Fale com um advogado
           </Link>
         </div>
