@@ -12,19 +12,6 @@ const nextConfig = {
   // Redireciona URLs com caixa alta para minúsculas para evitar conteúdo duplicado
   async redirects() {
     return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.karolinefrancisco.com',
-          },
-        ],
-        destination: 'https://karolinefrancisco.com/:path*',
-        permanent: true,
-        basePath: false,
-        locale: false,
-      },
       // Redireciona URLs de formato antigo para o novo (exemplo)
       {
         source: '/advogado-orleans',
