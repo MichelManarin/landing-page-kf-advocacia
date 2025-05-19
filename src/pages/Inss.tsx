@@ -15,7 +15,7 @@ import {
 import { motion, useInView } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '@/components/Layout';
-import '../styles/Inss.css';
+import styles from '../styles/Inss.module.css';
 
 const Inss = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,10 +45,10 @@ const Inss = () => {
 
   useEffect(() => {
     // Efeito para animação ao carregar a página
-    const heroContent = document.querySelector('.inss-hero-content');
+    const heroContent = document.querySelector(`.${styles["inss-hero-content"]}`);
     if (heroContent) {
       setTimeout(() => {
-        heroContent.classList.add('visible');
+        heroContent.classList.add(styles.visible);
       }, 100);
     }
   }, []);
@@ -66,25 +66,25 @@ const Inss = () => {
           content="Assessoria jurídica especializada em Direito Previdenciário. Aposentadoria, auxílio-doença, BPC/LOAS e outros benefícios do INSS."
         />
       </Head>
-      <main className="inss-page">
+      <main className={styles["inss-page"]}>
         {/* Seção 1 - Headline de impacto */}
-        <section className="inss-hero">
-          <div className="inss-hero-bg">
-            <div className="inss-shape inss-shape-1"></div>
-            <div className="inss-shape inss-shape-2"></div>
+        <section className={styles["inss-hero"]}>
+          <div className={styles["inss-hero-bg"]}>
+            <div className={`${styles["inss-shape"]} ${styles["inss-shape-1"]}`}></div>
+            <div className={`${styles["inss-shape"]} ${styles["inss-shape-2"]}`}></div>
           </div>
           <div className="container">
-            <div className={`inss-hero-content ${isVisible ? 'visible' : ''}`}>
-              <h1 className="inss-title">Você pode ter dinheiro para receber do INSS e nem sabe disso!</h1>
-              <p className="inss-description">
+            <div className={`${styles["inss-hero-content"]} ${isVisible ? styles.visible : ''}`}>
+              <h1 className={styles["inss-title"]}>Você pode ter dinheiro para receber do INSS e nem sabe disso!</h1>
+              <p className={styles["inss-description"]}>
                 Descubra em poucos cliques se você tem direito a algum benefício.
               </p>
               <button 
-                className="inss-cta-button"
+                className={styles["inss-cta-button"]}
                 onClick={handleWhatsAppClick}
               >
                 <span>Fale com um advogado</span>
-                <div className="inss-button-icon">
+                <div className={styles["inss-button-icon"]}>
                   <FaArrowRight />
                 </div>
               </button>
@@ -93,24 +93,24 @@ const Inss = () => {
         </section>
 
         {/* Seção 2 - Validação/Autoridade */}
-        <section className="inss-authority" ref={section2Ref}>
+        <section className={styles["inss-authority"]} ref={section2Ref}>
           <div className="container">
             <motion.div 
-              className="authority-content"
+              className={styles["authority-content"]}
               initial={{ opacity: 0, y: 50 }}
               animate={section2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="authority-image-container">
-                <div className="authority-icon">
+              <div className={styles["authority-image-container"]}>
+                <div className={styles["authority-icon"]}>
                   <FaUserAlt size={64} />
                 </div>
-                <div className="authority-badge">OAB/SC 64.256</div>
+                <div className={styles["authority-badge"]}>OAB/SC 64.256</div>
               </div>
-              <div className="authority-text">
+              <div className={styles["authority-text"]}>
                 <h2>Dra. Karoline Francisco</h2>
-                <p className="authority-subtitle">Especialista em Direito Previdenciário</p>
-                <p className="authority-description">
+                <p className={styles["authority-subtitle"]}>Especialista em Direito Previdenciário</p>
+                <p className={styles["authority-description"]}>
                   Advogada especialista em direito previdenciário, com mais de 10 anos de experiência profissional.
                   Atuo para garantir que você receba todos os seus direitos junto ao INSS.
                 </p>
@@ -120,36 +120,36 @@ const Inss = () => {
         </section>
 
         {/* Seção 3 - Dor e identificação */}
-        <section className="inss-pain" ref={section3Ref}>
+        <section className={styles["inss-pain"]} ref={section3Ref}>
           <div className="container">
             <motion.div 
-              className="pain-content"
+              className={styles["pain-content"]}
               initial={{ opacity: 0, y: 50 }}
               animate={section3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="pain-title">A maioria das pessoas nem imagina que tem direito.</h2>
-              <div className="pain-items">
-                <div className="pain-item">
-                  <div className="pain-icon">
+              <h2 className={styles["pain-title"]}>A maioria das pessoas nem imagina que tem direito.</h2>
+              <div className={styles["pain-items"]}>
+                <div className={styles["pain-item"]}>
+                  <div className={styles["pain-icon"]}>
                     <FaCheck />
                   </div>
                   <p>Trabalhou com carteira assinada?</p>
                 </div>
-                <div className="pain-item">
-                  <div className="pain-icon">
+                <div className={styles["pain-item"]}>
+                  <div className={styles["pain-icon"]}>
                     <FaCheck />
                   </div>
                   <p>Já ficou afastado por doença ou acidente?</p>
                 </div>
-                <div className="pain-item">
-                  <div className="pain-icon">
+                <div className={styles["pain-item"]}>
+                  <div className={styles["pain-icon"]}>
                     <FaCheck />
                   </div>
                   <p>Já contribuiu com o INSS mesmo que só um pouco?</p>
                 </div>
               </div>
-              <div className="pain-highlight">
+              <div className={styles["pain-highlight"]}>
                 Se você respondeu SIM para qualquer uma dessas perguntas, 
                 <strong> você pode ter direitos não reconhecidos!</strong>
               </div>
@@ -158,39 +158,39 @@ const Inss = () => {
         </section>
 
         {/* Seção 4 - Benefício e Ganho */}
-        <section className="inss-benefits" ref={section4Ref}>
+        <section className={styles["inss-benefits"]} ref={section4Ref}>
           <div className="container">
             <motion.div 
-              className="benefits-content"
+              className={styles["benefits-content"]}
               initial={{ opacity: 0, y: 50 }}
               animate={section4InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="benefits-title">Você pode receber valores atrasados ou garantir sua aposentadoria.</h2>
-              <div className="benefits-grid">
-                <div className="benefit-card">
-                  <div className="benefit-icon">
+              <h2 className={styles["benefits-title"]}>Você pode receber valores atrasados ou garantir sua aposentadoria.</h2>
+              <div className={styles["benefits-grid"]}>
+                <div className={styles["benefit-card"]}>
+                  <div className={styles["benefit-icon"]}>
                     <FaHeartbeat />
                   </div>
                   <h3>Benefícios por incapacidade</h3>
                   <p>Auxílio-doença, aposentadoria por invalidez e outros direitos quando você não pode trabalhar.</p>
                 </div>
-                <div className="benefit-card">
-                  <div className="benefit-icon">
+                <div className={styles["benefit-card"]}>
+                  <div className={styles["benefit-icon"]}>
                     <FaFileAlt />
                   </div>
                   <h3>Revisões de aposentadoria</h3>
                   <p>Verificação de cálculos incorretos que podem estar diminuindo seu benefício mensal.</p>
                 </div>
-                <div className="benefit-card">
-                  <div className="benefit-icon">
+                <div className={styles["benefit-card"]}>
+                  <div className={styles["benefit-icon"]}>
                     <FaUsers />
                   </div>
                   <h3>Pensão por morte</h3>
                   <p>Garantia de direitos para dependentes após o falecimento do beneficiário ou contribuinte.</p>
                 </div>
-                <div className="benefit-card">
-                  <div className="benefit-icon">
+                <div className={styles["benefit-card"]}>
+                  <div className={styles["benefit-icon"]}>
                     <FaHandHoldingUsd />
                   </div>
                   <h3>BPC/LOAS</h3>

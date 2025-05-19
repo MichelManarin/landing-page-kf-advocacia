@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import './BlogPreview.css';
+import styles from './BlogPreview.module.css';
 
 // Definir interface para o tipo de post
 interface BlogPost {
@@ -16,31 +16,31 @@ const recentPosts: BlogPost[] = [];
 
 const BlogPreview = () => {
   return (
-    <section className="blog-preview" id="blog">
+    <section className={styles["blog-preview"]} id="blog">
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Blog Jurídico</h2>
-          <p className="section-subtitle">Artigos e informações sobre direito em Orleans</p>
+        <div className={styles["section-header"]}>
+          <h2 className={styles["section-title"]}>Blog Jurídico</h2>
+          <p className={styles["section-subtitle"]}>Artigos e informações sobre direito em Orleans</p>
         </div>
         
         {recentPosts.length > 0 ? (
-          <div className="blog-preview-grid">
+          <div className={styles["blog-preview-grid"]}>
             {recentPosts.map(post => (
-              <article key={post.id} className="blog-preview-card">
-                <div className="blog-preview-image">
+              <article key={post.id} className={styles["blog-preview-card"]}>
+                <div className={styles["blog-preview-image"]}>
                   <img 
                     src={post.image} 
                     alt={`${post.title} - Artigo jurídico por Advogada em Orleans SC`} 
                     title={`${post.title} | Advocacia especializada em ${post.category}`} 
                   />
-                  <span className="blog-preview-category">{post.category}</span>
+                  <span className={styles["blog-preview-category"]}>{post.category}</span>
                 </div>
-                <div className="blog-preview-content">
-                  <h3 className="blog-preview-title">
+                <div className={styles["blog-preview-content"]}>
+                  <h3 className={styles["blog-preview-title"]}>
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
-                  <p className="blog-preview-excerpt">{post.excerpt}</p>
-                  <Link href={`/blog/${post.slug}`} className="blog-preview-link">
+                  <p className={styles["blog-preview-excerpt"]}>{post.excerpt}</p>
+                  <Link href={`/blog/${post.slug}`} className={styles["blog-preview-link"]}>
                     Ler mais
                   </Link>
                 </div>
@@ -48,16 +48,16 @@ const BlogPreview = () => {
             ))}
           </div>
         ) : (
-          <div className="blog-preview-empty">
+          <div className={styles["blog-preview-empty"]}>
             <p>Em breve, novos artigos estarão disponíveis.</p>
           </div>
         )}
         
-        <div className="blog-preview-cta">
-          <Link href="/blog" className="blog-preview-button">
+        <div className={styles["blog-preview-cta"]}>
+          <Link href="/blog" className={styles["blog-preview-button"]}>
             Ver todos os artigos
           </Link>
-          <Link href="/contato" className="blog-preview-button blog-preview-button-contact">
+          <Link href="/contato" className={`${styles["blog-preview-button"]} ${styles["blog-preview-button-contact"]}`}>
             Fale com um advogado
           </Link>
         </div>

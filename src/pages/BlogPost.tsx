@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import './BlogPost.css';
+import styles from './BlogPost.module.css';
 
 // Definir interfaces para os tipos
 interface BlogPost {
@@ -70,8 +70,8 @@ function BlogPost() {
     return (
       <>
         <Header />
-        <main className="blog-post-container">
-          <div className="loading-indicator">
+        <main className={styles["blog-post-container"]}>
+          <div className={styles["loading-indicator"]}>
             <p>Carregando...</p>
           </div>
         </main>
@@ -85,12 +85,12 @@ function BlogPost() {
     return (
       <>
         <Header />
-        <main className="blog-post-container">
-          <div className="post-not-found">
+        <main className={styles["blog-post-container"]}>
+          <div className={styles["post-not-found"]}>
             <h1>Artigo não encontrado</h1>
             <p>O artigo que você está procurando ainda não está disponível ou foi removido.</p>
-            <div className="post-not-found-actions">
-              <button onClick={() => router.push('/blog')} className="back-button">
+            <div className={styles["post-not-found-actions"]}>
+              <button onClick={() => router.push('/blog')} className={styles["back-button"]}>
                 Voltar para o Blog
               </button>
             </div>
@@ -104,11 +104,11 @@ function BlogPost() {
   return (
     <>
       <Header />
-      <main className="blog-post-container">
-        <article className="blog-post">
+      <main className={styles["blog-post-container"]}>
+        <article className={styles["blog-post"]}>
           <div className="container">
             {/* Breadcrumbs para SEO */}
-            <nav className="breadcrumbs" aria-label="breadcrumb">
+            <nav className={styles.breadcrumbs} aria-label="breadcrumb">
               <ol>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/blog">Blog</Link></li>
@@ -117,17 +117,17 @@ function BlogPost() {
             </nav>
             
             {/* Cabeçalho do post */}
-            <header className="post-header">
-              <div className="post-meta">
-                <span className="category">{post.category}</span>
-                <span className="date">{post.date}</span>
-                <span className="author">por {post.author}</span>
+            <header className={styles["post-header"]}>
+              <div className={styles["post-meta"]}>
+                <span className={styles.category}>{post.category}</span>
+                <span className={styles.date}>{post.date}</span>
+                <span className={styles.author}>por {post.author}</span>
               </div>
               <h1>{post.title}</h1>
             </header>
             
             {/* Imagem destacada */}
-            <div className="featured-image">
+            <div className={styles["featured-image"]}>
               <img 
                 src={post.image} 
                 alt={`Artigo jurídico: ${post.title} - Advocacia em Orleans | Karoline Francisco`} 
@@ -137,12 +137,12 @@ function BlogPost() {
             
             {/* Conteúdo do post */}
             <div 
-              className="post-content"
+              className={styles["post-content"]}
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
             
             {/* Tags para SEO */}
-            <div className="post-tags">
+            <div className={styles["post-tags"]}>
               <h3>Tags:</h3>
               <ul>
                 {post.tags.map((tag, index) => (
@@ -154,47 +154,47 @@ function BlogPost() {
             </div>
             
             {/* Autor */}
-            <div className="post-author">
-              <div className="author-avatar">
+            <div className={styles["post-author"]}>
+              <div className={styles["author-avatar"]}>
                 <img 
                   src="/author.jpg" 
                   alt="Dra. Karoline Francisco - Advogada em Orleans SC" 
                   title="Karoline Francisco - Autora do Blog Jurídico" 
                 />
               </div>
-              <div className="author-bio">
+              <div className={styles["author-bio"]}>
                 <h3>{post.author}</h3>
                 <p>Advogada especializada em Direito Previdenciário em Orleans-SC. OAB/SC 12345.</p>
-                <Link href="/sobre" className="more-about">Saiba mais</Link>
+                <Link href="/sobre" className={styles["more-about"]}>Saiba mais</Link>
               </div>
             </div>
             
             {/* CTA */}
-            <div className="post-cta">
+            <div className={styles["post-cta"]}>
               <h3>Precisa de assistência com sua aposentadoria em Orleans?</h3>
               <p>Entre em contato para uma consulta personalizada sobre seus direitos previdenciários.</p>
-              <Link href="/contato" className="cta-button">Fale com um advogado</Link>
+              <Link href="/contato" className={styles["cta-button"]}>Fale com um advogado</Link>
             </div>
           </div>
         </article>
         
         {/* Posts relacionados */}
         {relatedPosts.length > 0 && (
-          <section className="related-posts">
+          <section className={styles["related-posts"]}>
             <div className="container">
               <h2>Artigos Relacionados</h2>
-              <div className="related-grid">
+              <div className={styles["related-grid"]}>
                 {relatedPosts.map(post => (
-                  <article key={post.id} className="related-card">
-                    <div className="image-container">
+                  <article key={post.id} className={styles["related-card"]}>
+                    <div className={styles["image-container"]}>
                       <img 
                         src={post.image} 
                         alt={`Artigo relacionado: ${post.title} - Consultoria jurídica em Orleans SC`} 
                         title={`${post.title} | Artigos jurídicos relacionados`} 
                       />
-                      <span className="category">{post.category}</span>
+                      <span className={styles.category}>{post.category}</span>
                     </div>
-                    <div className="post-content">
+                    <div className={styles["post-content"]}>
                       <h3>
                         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                       </h3>

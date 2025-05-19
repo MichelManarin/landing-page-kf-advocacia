@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import { FaSearch, FaBookOpen } from 'react-icons/fa';
 import Link from 'next/link';
-import '../pages/Blog.css';
+import styles from './Blog.module.css';
 
 const Blog = () => {
   return (
@@ -14,9 +14,9 @@ const Blog = () => {
           content="Blog de conteúdos jurídicos sobre Direito Previdenciário, Direito de Família e Ações de Cobrança."
         />
       </Head>
-      <div className="blog-container">
+      <div className={styles["blog-container"]}>
         {/* Hero section */}
-        <section className="hero-blog">
+        <section className={styles["hero-blog"]}>
           <div className="container">
             <h1>Blog Jurídico</h1>
             <p>
@@ -26,9 +26,9 @@ const Blog = () => {
         </section>
 
         {/* Filtros e Busca */}
-        <section className="blog-filters">
+        <section className={styles["blog-filters"]}>
           <div className="container">
-            <div className="search-box">
+            <div className={styles["search-box"]}>
               <input 
                 type="text" 
                 placeholder="Buscar artigos..."
@@ -38,8 +38,8 @@ const Blog = () => {
               </button>
             </div>
             
-            <div className="category-filters">
-              <button className="active">
+            <div className={styles["category-filters"]}>
+              <button className={styles.active}>
                 Todos
               </button>
               <button>
@@ -56,13 +56,13 @@ const Blog = () => {
         </section>
 
         {/* Posts em Destaque */}
-        <section className="featured-posts">
+        <section className={styles["featured-posts"]}>
           <div className="container">
             <h2>Nossos Artigos</h2>
             
             {/* Placeholder para posts futuros */}
-            <div className="no-results">
-              <div className="featured-icon">
+            <div className={styles["no-results"]}>
+              <div className={styles["featured-icon"]}>
                 <FaBookOpen />
               </div>
               <h3>Conteúdo em construção</h3>
@@ -70,7 +70,7 @@ const Blog = () => {
                 Estamos preparando artigos de qualidade sobre temas jurídicos relevantes. 
                 Em breve, novos conteúdos estarão disponíveis nesta seção.
               </p>
-              <Link href="/#contato" className="cta-button">
+              <Link href="/#contato" className={styles["cta-button"]}>
                 Entre em contato
               </Link>
             </div>
@@ -78,9 +78,9 @@ const Blog = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="blog-cta">
+        <section className={styles["blog-cta"]}>
           <div className="container">
-            <div className="cta-content">
+            <div className={styles["cta-content"]}>
               <h2>
                 Precisa de assessoria jurídica especializada?
               </h2>
@@ -88,7 +88,7 @@ const Blog = () => {
                 Entre em contato para uma análise personalizada do seu caso. Oferecemos atendimento 
                 especializado em Direito Previdenciário, Direito de Família e Ações de Cobrança.
               </p>
-              <Link href="/#contato" className="cta-button">
+              <Link href="/#contato" className={styles["cta-button"]}>
                 Fale com um advogado
               </Link>
             </div>

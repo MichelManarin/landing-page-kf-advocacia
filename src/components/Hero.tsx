@@ -68,10 +68,6 @@ const Hero = () => {
                   <div className="feature-icon">✓</div>
                   <div className="feature-text">Comunicação clara e objetiva</div>
                 </li>
-                <li className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div className="feature-text">Primeira consulta gratuita</div>
-                </li>
               </ul>
               
               <div className="card-badge">
