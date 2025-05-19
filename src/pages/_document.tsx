@@ -13,7 +13,7 @@ export default function Document() {
         />
         <meta
           name="description"
-          content="Karoline Francisco - Advogada em Orleans SC. Especialista em Direito Previdenciário e Direito de Família."
+          content="Karoline Francisco - Advogada em Orleans. Especialista em Direito."
         />
         <meta name="keywords" content="Karoline Francisco, advogada Orleans, direito previdenciário, advogada SC, INSS Orleans, escritório advocacia Orleans, direito família Orleans" />
         <meta name="author" content="Karoline Francisco" />

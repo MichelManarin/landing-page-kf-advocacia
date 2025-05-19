@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import { FaSearch, FaBookOpen } from 'react-icons/fa';
 import Link from 'next/link';
-import styles from './Blog.module.css';
+import styles from '../Blog.module.css';
 
 const Blog = () => {
   return (
