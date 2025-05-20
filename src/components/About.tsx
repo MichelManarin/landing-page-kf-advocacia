@@ -21,7 +21,7 @@ const About = () => {
                 <div className="about-card-decoration"></div>
                 <h3>Perfil Profissional</h3>
                 <p>
-                  Com formação sólida e experiência prática, ofereço assistência jurídica personalizada
+                  Advogada em Orleans-Sc com formação sólida e experiência prática, ofereço assistência jurídica personalizada
                   e eficaz para proteger seus direitos e interesses. Minha abordagem combina
                   conhecimento técnico com atendimento humanizado, buscando sempre as melhores
                   soluções para cada caso.
