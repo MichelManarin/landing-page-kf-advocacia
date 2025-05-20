@@ -210,7 +210,7 @@ const AdvogadaOrleans = () => {
                   <h3>Quanto custa um advogado em Orleans para causas previdenciárias?</h3>
                 </div>
                 <div className="faq-answer">
-                  <p>Os honorários para causas previdenciárias em Orleans geralmente seguem a tabela da OAB/SC, podendo variar entre 10% a 30% do valor conquistado ao final do processo. Em nosso escritório, oferecemos a primeira consulta gratuita para avaliação do caso e apresentação dos custos de forma transparente.</p>
+                  <p>Os honorários para causas previdenciárias em Orleans geralmente seguem a tabela da OAB/SC, podendo variar entre 10% a 30% do valor conquistado ao final do processo. </p>
                 </div>
               </div>
               

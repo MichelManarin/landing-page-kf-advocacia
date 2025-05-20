@@ -49,7 +49,7 @@ const Footer = () => {
           <div className="pre-footer-content">
             <div className="pre-footer-text">
               <h3>Precisa de orientação jurídica?</h3>
-              <p>Entre em contato para uma consulta inicial gratuita.</p>
+              <p>Fale com um advogado</p>
             </div>
             <button 
               className="footer-cta-button"

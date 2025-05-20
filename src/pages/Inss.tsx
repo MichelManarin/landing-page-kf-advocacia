@@ -215,8 +215,8 @@ const Inss = () => {
                 <div className="process-step">
                   <div className="step-number">1</div>
                   <div className="step-content">
-                    <h3>Fale conosco pelo WhatsApp</h3>
-                    <p>Entre em contato para uma análise personalizada do seu caso.</p>
+                    <h3>Fale com um advogado</h3>
+                    <p>Os honorários para causas previdenciárias em Orleans geralmente seguem a tabela da OAB/SC, podendo variar entre 10% a 30% do valor conquistado ao final do processo.</p>
                   </div>
                 </div>
                 <div className="process-step">
@@ -305,7 +305,7 @@ const Inss = () => {
             >
               <h2 className="final-cta-title">Não deixe um direito seu para depois.</h2>
               <p className="final-cta-description">
-                Faça a verificação gratuita agora mesmo.
+                Fale com um advogado
               </p>
               <button 
                 className="final-cta-button"
