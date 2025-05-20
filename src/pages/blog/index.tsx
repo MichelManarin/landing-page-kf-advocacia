@@ -38,7 +38,7 @@ const Blog = () => {
               </button>
             </div>
             
-            <div className={styles["category-filters mt-3"]}>
+            <div className={styles["category-filters"]}>
               <button className={styles.active}>
                 Todos
               </button>
