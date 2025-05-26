@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 Allow: /advogada-orleans
+Allow: /auxilio-acidente
 Allow: /blog
 Allow: /inss
 Allow: /sobre

@@ -28,6 +28,13 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import styles from '../styles/AuxilioAcidente.module.css';
 
+// Declaração do tipo gtag para TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 const AuxilioAcidente = () => {
   const [isVisible, setIsVisible] = useState(false);
   
@@ -63,6 +70,25 @@ const AuxilioAcidente = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
+    // Event snippet for Clique de saída conversion page
+    // Só dispara a conversão se o usuário veio de um anúncio do Google Ads
+    if (typeof window !== 'undefined' && window.gtag) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const gclid = urlParams.get('gclid'); // Google Click ID
+      const utm_source = urlParams.get('utm_source');
+      const utm_medium = urlParams.get('utm_medium');
+      
+      // Verifica se veio de um anúncio do Google Ads
+      const isFromGoogleAds = gclid || 
+                             (utm_source === 'google' && utm_medium === 'cpc') ||
+                             (utm_source === 'google' && utm_medium === 'ppc') ||
+                             utm_source === 'googleads';
+      
+      if (isFromGoogleAds) {
+        window.gtag('event', 'conversion', {'send_to': 'AW-17088118383/OAxWCJL-lM4aEO_8n9Q_'});
+      }
+    }
+    
     window.open('https://wa.me/5548991472830?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20verificar%20meu%20direito%20ao%20auxílio-acidente.', '_blank');
   };
 
@@ -73,6 +99,58 @@ const AuxilioAcidente = () => {
         <meta
           name="description"
           content="Sofreu um acidente e ficou com sequelas? Entenda se você tem direito ao auxílio-acidente do INSS mesmo continuando a trabalhar. Consulta com advogado especializado."
+        />
+        <meta name="keywords" content="auxílio acidente, INSS, benefício previdenciário, sequelas acidente, advogado previdenciário Orleans, direito previdenciário, auxílio acidente trabalhando, benefício INSS Orleans" />
+        <meta name="author" content="Karoline Francisco" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://karolinefrancisco.com/auxilio-acidente" />
+        <meta property="og:title" content="Auxílio-Acidente INSS | Entenda seus direitos | Karoline Francisco" />
+        <meta property="og:description" content="Sofreu um acidente e ficou com sequelas? Entenda se você tem direito ao auxílio-acidente do INSS mesmo continuando a trabalhar. Consulta com advogado especializado." />
+        <meta property="og:site_name" content="Karoline Francisco - Advogada" />
+        <meta property="og:locale" content="pt_BR" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://karolinefrancisco.com/auxilio-acidente" />
+        <meta property="twitter:title" content="Auxílio-Acidente INSS | Entenda seus direitos" />
+        <meta property="twitter:description" content="Sofreu um acidente e ficou com sequelas? Entenda se você tem direito ao auxílio-acidente do INSS mesmo continuando a trabalhar." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://karolinefrancisco.com/auxilio-acidente" />
+        
+        {/* Schema.org markup para a página */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: 'Auxílio-Acidente INSS - Entenda seus direitos',
+              description: 'Guia completo sobre auxílio-acidente do INSS. Entenda se você tem direito ao benefício mesmo continuando a trabalhar.',
+              author: {
+                '@type': 'Person',
+                name: 'Karoline Francisco',
+                jobTitle: 'Advogada',
+                url: 'https://karolinefrancisco.com'
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'Karoline Francisco - Advogada',
+                url: 'https://karolinefrancisco.com'
+              },
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': 'https://karolinefrancisco.com/auxilio-acidente'
+              },
+              datePublished: '2024-01-15',
+              dateModified: '2024-01-15',
+              keywords: 'auxílio acidente, INSS, benefício previdenciário, sequelas acidente, advogado previdenciário'
+            })
+          }}
         />
       </Head>
       <main className={styles["page"]}>

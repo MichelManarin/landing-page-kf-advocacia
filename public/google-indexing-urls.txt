@@ -1,0 +1,13 @@
+# URLs importantes para indexação no Google
+# Submeta essas URLs manualmente no Google Search Console
+
+https://karolinefrancisco.com/
+https://karolinefrancisco.com/advogada-orleans
+https://karolinefrancisco.com/auxilio-acidente
+https://karolinefrancisco.com/inss
+https://karolinefrancisco.com/sobre
+https://karolinefrancisco.com/blog
+https://karolinefrancisco.com/contato
+
+# Sitemap principal
+https://karolinefrancisco.com/sitemap.xml 
