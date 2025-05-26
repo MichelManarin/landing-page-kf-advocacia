@@ -60,7 +60,7 @@ function Contato() {
                     <option value="">Selecione um assunto</option>
                     <option value="previdenciario">Direito Previdenciário</option>
                     <option value="familia">Direito de Família</option>
-                    <option value="cobranca">Ações de Cobrança</option>
+                    <option value="cobranca">Direito Penal</option>
                     <option value="outro">Outro</option>
                   </select>
                 </div>

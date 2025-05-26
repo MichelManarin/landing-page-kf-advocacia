@@ -13,13 +13,13 @@ const pageSEO: Record<string, {
 }> = {
   '/': {
     title: 'Karoline Francisco | Advogada em Orleans SC | Especialista em Direito',
-    description: 'Karoline Francisco, advogada especializada em Direito Previdenciário, Família e Ações de Cobrança em Orleans. Agende uma consulta!',
+    description: 'Karoline Francisco, advogada especializada em Direito Previdenciário, Família e Direito Penal em Orleans. Agende uma consulta!',
     ogImage: '/images/karoline-francisco-advogada.jpg',
     canonicalUrl: 'https://karolinefrancisco.com/'
   },
   '/advogada-orleans': {
     title: 'Advogada em Orleans - Karoline Francisco | Especialista em Direito',
-    description: 'Advogada em Orleans - Karoline Francisco, especialista em Direito Previdenciário, Família e Ações de Cobrança. Atendimento personalizado em Orleans-SC.',
+    description: 'Advogada em Orleans - Karoline Francisco, especialista em Direito Previdenciário, Família e Direito Penal. Atendimento personalizado em Orleans-SC.',
     ogImage: '/images/advogada-orleans.jpg',
     canonicalUrl: 'https://karolinefrancisco.com/advogada-orleans'
   },

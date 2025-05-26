@@ -11,7 +11,10 @@ import {
   FaFileInvoiceDollar, 
   FaHandshake, 
   FaClipboardCheck,
-  FaUserInjured
+  FaUserInjured,
+  FaGavel,
+  FaShieldAlt,
+  FaSearch
 } from 'react-icons/fa';
 import Link from 'next/link';
 
@@ -117,14 +120,14 @@ const Services = () => {
             </ul>
           </div>
           
-          {/* Collections Service */}
+          {/* Criminal Law Service */}
           <div className="service-card">
             <div className="service-icon-container tertiary">
-              <FaFileInvoiceDollar className="service-main-icon" />
+              <FaGavel className="service-main-icon" />
             </div>
-            <h3 className="service-title">Ações de Cobrança</h3>
+            <h3 className="service-title">Direito Penal</h3>
             <p className="service-text">
-              Recuperação de créditos e solução de conflitos financeiros de forma eficiente.
+              Defesa especializada em processos penais com atuação estratégica e dedicada.
             </p>
             
             <div className="service-divider"></div>
@@ -132,27 +135,21 @@ const Services = () => {
             <ul className="service-features">
               <li className="service-feature-item">
                 <div className="feature-icon-container">
-                  <FaBalanceScale />
+                  <FaShieldAlt />
                 </div>
-                <span>Cobranças Judiciais</span>
+                <span>Defesa em processos criminais</span>
+              </li>
+              <li className="service-feature-item">
+                <div className="feature-icon-container">
+                  <FaSearch />
+                </div>
+                <span>Orientação durante a investigação</span>
               </li>
               <li className="service-feature-item">
                 <div className="feature-icon-container">
                   <FaHandshake />
                 </div>
-                <span>Negociação de Dívidas</span>
-              </li>
-              <li className="service-feature-item">
-                <div className="feature-icon-container">
-                  <FaFileContract />
-                </div>
-                <span>Execução de Títulos</span>
-              </li>
-              <li className="service-feature-item">
-                <div className="feature-icon-container">
-                  <FaClipboardCheck />
-                </div>
-                <span>Protesto de Títulos</span>
+                <span>Negociação de acordos</span>
               </li>
             </ul>
           </div>

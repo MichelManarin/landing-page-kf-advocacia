@@ -82,7 +82,7 @@ const Footer = () => {
               </div>
               <p className="footer-description">
                 Serviços jurídicos especializados em Direito Previdenciário, 
-                Direito de Família e Ações de Cobrança.
+                Direito de Família e Direito Penal.
               </p>
               <div className="footer-contact-info">
                 <div className="footer-contact-item">
@@ -110,7 +110,7 @@ const Footer = () => {
                 <li><Link href="/#servicos" title="Direito Previdenciário em Orleans">Direito Previdenciário</Link></li>
                 <li><Link href="/inss" title="Aposentadorias e Benefícios INSS em Orleans">Aposentadorias INSS</Link></li>
                 <li><Link href="/#servicos" title="Advogada para Direito de Família em Orleans">Direito de Família</Link></li>
-                <li><Link href="/#servicos" title="Ações de Cobrança em Orleans">Ações de Cobrança</Link></li>
+                <li><Link href="/#servicos" title="Direito Penal em Orleans">Direito Penal</Link></li>
                 <li><Link href="/advogada-orleans" title="Advogada especializada em Orleans">Advogada em Orleans</Link></li>
               </ul>
             </div>

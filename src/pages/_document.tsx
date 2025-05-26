@@ -23,6 +23,19 @@ export default function Document() {
         <meta property="og:site_name" content="Karoline Francisco - Advogada" />
         <meta property="og:locale" content="pt_BR" />
 
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17088118383"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17088118383');
+            `
+          }}
+        />
+
         {/* Schema.org markup para Advogado */}
         <script
           type="application/ld+json"
@@ -46,7 +59,7 @@ export default function Document() {
                 'https://www.instagram.com/dra.karolinefrancisco/',
                 'https://www.facebook.com/drakarolinefrancisco/'
               ],
-              serviceType: ['Direito Previdenciário', 'Direito de Família', 'Ações de Cobrança'],
+              serviceType: ['Direito Previdenciário', 'Direito de Família', 'Direito Penal'],
               areaServed: {
                 '@type': 'City',
                 name: 'Orleans',

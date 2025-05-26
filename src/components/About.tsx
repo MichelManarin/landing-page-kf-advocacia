@@ -28,7 +28,7 @@ const About = () => {
                 </p>
                 <p>
                   Especialista em Direito Previdenciário, com atuação destacada em processos junto ao INSS,
-                  além de expertise em Direito de Família e Ações de Cobrança. Pós-graduada em Direito Processual Civil,
+                  além de expertise em Direito de Família e Direito Penal. Pós-graduada em Direito Processual Civil,
                   trabalho com dedicação e compromisso para alcançar os melhores resultados para meus clientes.
                 </p>
                 
