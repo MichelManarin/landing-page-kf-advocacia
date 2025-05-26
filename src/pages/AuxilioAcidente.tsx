@@ -72,23 +72,30 @@ const AuxilioAcidente = () => {
   const handleWhatsAppClick = () => {
     // Event snippet for Clique de saída conversion page
     // Só dispara a conversão se o usuário veio de um anúncio do Google Ads
-    if (typeof window !== 'undefined' && window.gtag) {
-      const urlParams = new URLSearchParams(window.location.search);
-      const gclid = urlParams.get('gclid'); // Google Click ID
-      const utm_source = urlParams.get('utm_source');
-      const utm_medium = urlParams.get('utm_medium');
-      
-      // Verifica se veio de um anúncio do Google Ads
-      const isFromGoogleAds = gclid || 
-                             (utm_source === 'google' && utm_medium === 'cpc') ||
-                             (utm_source === 'google' && utm_medium === 'ppc') ||
-                             utm_source === 'googleads';
-      
-      if (isFromGoogleAds) {
-        window.gtag('event', 'conversion', {'send_to': 'AW-17088118383/OAxWCJL-lM4aEO_8n9Q_'});
+    try {
+      if (typeof window !== 'undefined' && window.gtag) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const gclid = urlParams.get('gclid'); // Google Click ID
+        const utm_source = urlParams.get('utm_source');
+        const utm_medium = urlParams.get('utm_medium');
+        
+        // Verifica se veio de um anúncio do Google Ads
+        const isFromGoogleAds = gclid || 
+                               (utm_source === 'google' && utm_medium === 'cpc') ||
+                               (utm_source === 'google' && utm_medium === 'ppc') ||
+                               utm_source === 'googleads';
+        
+        if (isFromGoogleAds) {
+          window.gtag('event', 'conversion', {'send_to': 'AW-17088118383/OAxWCJL-lM4aEO_8n9Q_'});
+        }
       }
+    } catch (error) {
+      // Se houver erro na verificação ou no gtag, apenas loga o erro
+      // mas continua com o redirecionamento para o WhatsApp
+      console.error('Erro ao processar conversão do Google Ads:', error);
     }
     
+    // Sempre redireciona para o WhatsApp, independente de erros acima
     window.open('https://wa.me/5548991472830?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20verificar%20meu%20direito%20ao%20auxílio-acidente.', '_blank');
   };
 
