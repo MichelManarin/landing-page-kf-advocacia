@@ -10,6 +10,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
+  
+  const isAuxilioAcidentePage = router.pathname === '/auxilio-acidente';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +31,7 @@ const Header = () => {
   };
 
   return (
-    <header className={scrolled ? 'scrolled' : ''}>
+    <header className={`${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-bg"></div>
       <div className="container">
         <div className="navbar">
@@ -54,7 +56,6 @@ const Header = () => {
             <Link href="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
             <Link href="/#servicos" className="nav-link">Serviços</Link>
             <Link href="/#sobre" className="nav-link">Sobre</Link>
-            <Link href="/inss" className={`nav-link ${isActive('/inss') ? 'active' : ''}`}>INSS</Link>
             <Link href="/blog" className={`nav-link ${isActive('/blog') ? 'active' : ''}`}>Blog</Link>
             <Link href="/#contato" className="nav-link">Contato</Link>
           </nav>
@@ -104,19 +105,11 @@ const Header = () => {
             <span className="link-text">Sobre</span>
           </Link>
           <Link 
-            href="/inss" 
-            className="mobile-nav-link"
-            onClick={() => setIsOpen(false)}
-          >
-            <span className="link-number">04</span>
-            <span className="link-text">INSS</span>
-          </Link>
-          <Link 
             href="/blog" 
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
-            <span className="link-number">05</span>
+            <span className="link-number">04</span>
             <span className="link-text">Blog</span>
           </Link>
           <Link 
@@ -124,7 +117,7 @@ const Header = () => {
             className="mobile-nav-link"
             onClick={() => setIsOpen(false)}
           >
-            <span className="link-number">06</span>
+            <span className="link-number">05</span>
             <span className="link-text">Contato</span>
           </Link>
         </div>

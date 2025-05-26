@@ -10,8 +10,10 @@ import {
   FaMoneyBillWave, 
   FaFileInvoiceDollar, 
   FaHandshake, 
-  FaClipboardCheck
+  FaClipboardCheck,
+  FaUserInjured
 } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -51,6 +53,14 @@ const Services = () => {
                   <FaHospital />
                 </div>
                 <span>Auxílio-Doença</span>
+              </li>
+              <li className="service-feature-item">
+                <div className="feature-icon-container">
+                  <FaUserInjured />
+                </div>
+                <Link href="/auxilio-acidente" className="feature-link">
+                  <span>Auxílio-Acidente</span>
+                </Link>
               </li>
               <li className="service-feature-item">
                 <div className="feature-icon-container">

@@ -500,6 +500,30 @@ header {
   height: 80px;
 }
 
+/* Auxilio Acidente Header Styles */
+.auxilio-header:not(.scrolled) {
+  background-color: transparent;
+}
+
+.auxilio-header:not(.scrolled) .navbar-bg {
+  opacity: 0;
+}
+
+.auxilio-header:not(.scrolled) .brand-name,
+.auxilio-header:not(.scrolled) .brand-title,
+.auxilio-header:not(.scrolled) .nav-link,
+.auxilio-header:not(.scrolled) .icon-menu {
+  color: #fff;
+}
+
+.auxilio-header:not(.scrolled) .nav-link::after {
+  background-color: #fff;
+}
+
+.auxilio-header:not(.scrolled) .logo {
+  filter: brightness(0) invert(1);
+}
+
 .navbar-bg {
   position: absolute;
   top: 0;
@@ -926,7 +950,7 @@ header.scrolled .navbar-bg {
 }
 
 .feature-item:hover {
-  transform: translateX(5px);
+  transform: translateY(-3px);
 }
 
 .feature-icon {
@@ -1597,7 +1621,14 @@ footer {
 }
 
 .service-feature-item:hover {
-  transform: translateX(5px);
+  transform: translateY(-3px);
+}
+
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
 }
 
 .feature-icon-container {
