@@ -80,6 +80,34 @@ const Header = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-menu-container">
+        <button 
+            onClick={() => setIsOpen(false)}
+            className="mobile-close-button"
+            aria-label="Fechar Menu"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '60px',
+              height: '60px',
+              background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+              border: '2px solid rgba(217, 179, 179, 0.4)',
+              borderRadius: '50%',
+              color: '#5a4a42',
+              cursor: 'pointer',
+              transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(217, 179, 179, 0.2)',
+              position: 'relative',
+              overflow: 'hidden',
+              outline: 'none',
+              padding: '0',
+              margin: '0'
+            }}
+          >
+            <IoClose size={28} />
+          </button>
           <Link 
             href="/" 
             className="mobile-nav-link"
