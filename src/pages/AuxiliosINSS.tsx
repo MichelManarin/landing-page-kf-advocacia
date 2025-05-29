@@ -262,6 +262,32 @@ const AuxiliosINSS = () => {
                   <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
                 </div>
               </Link>
+              
+              <Link href="/bpc-loas" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaHeart size={22} />
+                    </span>
+                    BPC LOAS
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
+                  </h3>
+                  <p>Benefício assistencial de <strong>um salário mínimo</strong> para idosos a partir de 65 anos e pessoas com deficiência de baixa renda. Não exige contribuição prévia ao INSS.</p>
+                </div>
+              </Link>
+              
+              <Link href="/pensao-morte" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaHome size={22} />
+                    </span>
+                    Pensão por Morte
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
+                  </h3>
+                  <p>Benefício previdenciário pago aos <strong>dependentes do segurado falecido</strong>. Protege financeiramente cônjuges, filhos e outros dependentes habilitados.</p>
+                </div>
+              </Link>
             </motion.div>
           </div>
         </section>
@@ -361,24 +387,34 @@ const AuxiliosINSS = () => {
                     </div>
                   </div>
                 </Link>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaHeart size={32} />
+                <Link href="/bpc-loas" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaHeart size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>
+                        BPC (LOAS)
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
+                      <p>Benefício assistencial para idosos e pessoas com deficiência de baixa renda</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>BPC (LOAS)</h4>
-                    <p>Benefício assistencial para idosos e pessoas com deficiência de baixa renda</p>
+                </Link>
+                <Link href="/pensao-morte" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaHome size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>
+                        Pensão por Morte
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
+                      <p>Benefício pago aos dependentes do segurado que faleceu</p>
+                    </div>
                   </div>
-                </div>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaHome size={32} />
-                  </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Pensão por Morte</h4>
-                    <p>Benefício pago aos dependentes do segurado que faleceu</p>
-                  </div>
-                </div>
+                </Link>
               </div>
             </motion.div>
           </div>
