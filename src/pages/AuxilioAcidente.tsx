@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { 
   FaWhatsapp, 
   FaCheck, 
@@ -36,8 +36,6 @@ declare global {
 }
 
 const AuxilioAcidente = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  
   // Refs para animar quando elementos entrarem na tela
   const section2Ref = useRef(null);
   const section3Ref = useRef(null);
@@ -50,24 +48,6 @@ const AuxilioAcidente = () => {
   const section4InView = useInView(section4Ref, { once: true, amount: 0.3 });
   const section5InView = useInView(section5Ref, { once: true, amount: 0.3 });
   const section6InView = useInView(section6Ref, { once: true, amount: 0.3 });
-  
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Efeito para animação ao carregar a página
-    const heroContent = document.querySelector(`.${styles["hero-content"]}`);
-    if (heroContent) {
-      setTimeout(() => {
-        heroContent.classList.add(styles.visible);
-      }, 100);
-    }
-  }, []);
 
   const handleWhatsAppClick = () => {
     // Event snippet for Clique de saída conversion page
@@ -161,35 +141,6 @@ const AuxilioAcidente = () => {
         />
       </Head>
       <main className={styles["page"]}>
-        {/* Seção 1 - Hero com headline informativa */}
-        <section className={styles["hero"]}>
-          <div className={styles["hero-bg"]}>
-            <div className={`${styles["shape"]} ${styles["shape-1"]}`}></div>
-            <div className={`${styles["shape"]} ${styles["shape-2"]}`}></div>
-          </div>
-          <div className="container">
-            <div className={`${styles["hero-content"]} ${isVisible ? styles.visible : ''}`}>
-              <h1 className={styles["title"]}>
-                VOCÊ SOFREU UM ACIDENTE E FICOU COM SEQUELAS?
-              </h1>
-              <p className={styles["subtitle"]}>
-                Você sabia que <em>mesmo trabalhando</em> é possível receber um <strong>benefício mensal do INSS</strong>? Milhares de brasileiros já conquistaram o <strong>Auxílio-Acidente</strong> — um <em>direito pouco divulgado</em>, mas que pode fazer a <strong>diferença no seu bolso</strong>.
-              </p>
-              <div className={styles["cta-container"]}>
-                <button 
-                  className={styles["cta-button"]}
-                  onClick={handleWhatsAppClick}
-                >
-                  <div className={styles["whatsapp-icon"]}>
-                    <FaWhatsapp size={20} />
-                  </div>
-                  <span>Fale com um advogado</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
@@ -387,9 +338,6 @@ const AuxilioAcidente = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className={styles["contact-title"]}>FICOU DÚVIDA, ENTRE EM CONTATO COM UM ESPECIALISTA EM DIREITO PREVIDENCIÁRIO</h2>
-              <p className={styles["contact-description"]}>
-                Você pode estar deixando de receber um benefício que é seu por direito.
-              </p>
               <div className={styles["contact-options"]}>
                 <button 
                   className={styles["contact-button"]}

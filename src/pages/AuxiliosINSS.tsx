@@ -32,6 +32,7 @@ import { HiOutlineDocumentText } from 'react-icons/hi';
 import { IoMdMedical } from 'react-icons/io';
 import { motion, useInView } from 'framer-motion';
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
 import styles from '../styles/AuxiliosINSS.module.css';
 
@@ -218,15 +219,17 @@ const AuxiliosINSS = () => {
                 <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
               </div>
               
-              <div className={styles["info-card"]}>
-                <h3>
-                  <span className={styles["info-card-icon"]}>
-                    <FaUserInjured size={22} />
-                  </span>
-                  Auxílio-Acidente
-                </h3>
-                <p>Benefício mensal pago ao trabalhador que sofreu acidente e ficou com <strong>sequelas permanentes</strong> que reduzem sua capacidade laboral. Pode ser recebido mesmo trabalhando.</p>
-              </div>
+              <Link href="/auxilio-acidente" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaUserInjured size={22} />
+                    </span>
+                    Auxílio-Acidente
+                  </h3>
+                  <p>Benefício mensal pago ao trabalhador que sofreu acidente e ficou com <strong>sequelas permanentes</strong> que reduzem sua capacidade laboral. Pode ser recebido mesmo trabalhando.</p>
+                </div>
+              </Link>
               
               <div className={styles["info-card"]}>
                 <h3>
@@ -271,15 +274,17 @@ const AuxiliosINSS = () => {
                     <p>Para quem está temporariamente incapacitado para o trabalho por doença ou acidente</p>
                   </div>
                 </div>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaUserInjured size={32} />
+                <Link href="/auxilio-acidente" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaUserInjured size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>Auxílio-Acidente</h4>
+                      <p>Benefício mensal para quem sofreu acidente e ficou com sequelas permanentes</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Auxílio-Acidente</h4>
-                    <p>Benefício mensal para quem sofreu acidente e ficou com sequelas permanentes</p>
-                  </div>
-                </div>
+                </Link>
                 <div className={styles["benefit-item"]}>
                   <div className={styles["benefit-icon"]}>
                     <FaUserTie size={32} />
