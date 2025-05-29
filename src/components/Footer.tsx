@@ -99,7 +99,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-contact-item">
                   <FaClock className="footer-contact-icon" />
-                  <span>Seg-Sex: 9h às 18h</span>
+                  <span>24 horas</span>
                 </div>
               </div>
             </div>
