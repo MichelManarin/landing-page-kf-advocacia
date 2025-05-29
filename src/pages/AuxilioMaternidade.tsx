@@ -215,8 +215,8 @@ const AuxilioMaternidade = () => {
                     <FaCalendarCheck size={24} />
                   </div>
                   <div className={styles["requirement-content"]}>
-                    <h4>Carência mínima</h4>
-                    <p>10 meses de contribuição para parto normal, sem carência para adoção ou em casos de parto prematuro</p>
+                    <h4>Requisito de contribuição</h4>
+                    <p>Qualquer mulher que tenha contribuído ao menos uma vez ao INSS tem direito ao benefício, independentemente do tempo de contribuição.</p>
                   </div>
                 </div>
                 <div className={styles["requirement-item"]}>
