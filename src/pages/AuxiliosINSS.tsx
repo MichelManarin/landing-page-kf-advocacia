@@ -210,15 +210,17 @@ const AuxiliosINSS = () => {
             >
               <h2 className={styles["section-title"]} style={{ color: '#1a5276' }}>PRINCIPAIS BENEFÍCIOS DO INSS</h2>
               
-              <div className={styles["info-card"]}>
-                <h3>
-                  <span className={styles["info-card-icon"]}>
-                    <FaHeartbeat size={22} />
-                  </span>
-                  Auxílio-Doença
-                </h3>
-                <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
-              </div>
+              <Link href="/auxilio-doenca" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaHeartbeat size={22} />
+                    </span>
+                    Auxílio-Doença
+                  </h3>
+                  <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
+                </div>
+              </Link>
               
               <Link href="/auxilio-acidente" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
@@ -266,15 +268,17 @@ const AuxiliosINSS = () => {
             >
               <h2 className={styles["section-title"]} style={{ color: '#1a5276' }}>TIPOS DE AUXÍLIOS E BENEFÍCIOS</h2>
               <div className={styles["benefits-grid"]}>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaHeartbeat size={32} />
+                <Link href="/auxilio-doenca" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaHeartbeat size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>Auxílio-Doença</h4>
+                      <p>Para quem está temporariamente incapacitado para o trabalho por doença ou acidente</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Auxílio-Doença</h4>
-                    <p>Para quem está temporariamente incapacitado para o trabalho por doença ou acidente</p>
-                  </div>
-                </div>
+                </Link>
                 <Link href="/auxilio-acidente" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
                     <div className={styles["benefit-icon"]}>
