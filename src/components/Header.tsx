@@ -46,10 +46,10 @@ const Header = () => {
                 height={80}
               />
             </Link>
-            <div className="logo-text">
+            <Link href="/" className="logo-text">
               <h1 className="brand-name">Karoline Francisco</h1>
               <p className="brand-title">ADVOGADA</p>
-            </div>
+            </Link>
           </div>
 
           <nav className="desktop-menu">
