@@ -1,4 +1,4 @@
-/* Auxilios INSS Page Styles - Redesigned */
+/* Auxilio Maternidade Page Styles - Redesigned */
 
 /* General Styles */
 .page {
@@ -104,7 +104,7 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: 42px;
   line-height: 1.3;
   margin-bottom: 25px;
   font-weight: 800;
@@ -204,6 +204,7 @@
   margin-right: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .cta-button:hover {
@@ -231,11 +232,12 @@
 }
 
 .cta-note {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
   font-style: italic;
+  opacity: 0.8;
 }
 
 /* Information Section */
@@ -270,53 +272,6 @@
   height: 0;
   background: linear-gradient(to bottom, #1a5276, #2980b9);
   transition: height 0.6s ease;
-}
-
-/* Indicador de link clicável */
-.info-card[style*="cursor: pointer"]::after {
-  content: '→';
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 18px;
-  color: #1a5276;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.info-card[style*="cursor: pointer"]:hover::after {
-  opacity: 1;
-  transform: translateX(3px);
-  color: #2980b9;
-}
-
-/* Badge "Clique aqui" para mobile */
-@media (max-width: 768px) {
-  .info-card[style*="cursor: pointer"]::before {
-    content: 'Toque para saber mais';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: linear-gradient(135deg, #1a5276, #2980b9);
-    color: white;
-    font-size: 10px;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-    width: auto;
-    height: auto;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-  }
-  
-  .info-card[style*="cursor: pointer"]:hover::before {
-    opacity: 1;
-    transform: scale(1.05);
-  }
 }
 
 .info-card:hover {
@@ -385,15 +340,15 @@
   font-weight: 600;
 }
 
-/* Benefits Section */
-.benefits {
+/* Requirements Section - Versão melhorada */
+.requirements {
   padding: 80px 0;
   background-color: #f5f9fd;
   position: relative;
   overflow: hidden;
 }
 
-.benefits::before {
+.requirements::before {
   content: '';
   position: absolute;
   top: -100px;
@@ -404,7 +359,7 @@
   background: radial-gradient(circle, rgba(26, 82, 118, 0.03) 0%, rgba(26, 82, 118, 0) 70%);
 }
 
-.benefits::after {
+.requirements::after {
   content: '';
   position: absolute;
   bottom: -80px;
@@ -415,19 +370,24 @@
   background: radial-gradient(circle, rgba(26, 82, 118, 0.02) 0%, rgba(26, 82, 118, 0) 70%);
 }
 
-.benefits-content {
+.requirements-content {
   position: relative;
   z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.requirements-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   margin-top: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.benefit-item {
+.requirement-item {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
@@ -438,9 +398,10 @@
   position: relative;
   overflow: hidden;
   border-bottom: 3px solid transparent;
+  width: 100%;
 }
 
-.benefit-item::before {
+.requirement-item::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -451,63 +412,16 @@
   transition: width 0.4s ease;
 }
 
-/* Indicador de link clicável para benefit-item */
-.benefit-item[style*="cursor: pointer"]::after {
-  content: '→';
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 16px;
-  color: #1a5276;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-  font-weight: bold;
-}
-
-.benefit-item[style*="cursor: pointer"]:hover::after {
-  opacity: 1;
-  transform: translateX(3px);
-  color: #2980b9;
-}
-
-/* Badge "Clique aqui" para mobile nos benefit-items */
-@media (max-width: 768px) {
-  .benefit-item[style*="cursor: pointer"]::before {
-    content: 'Toque aqui';
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: linear-gradient(135deg, #1a5276, #2980b9);
-    color: white;
-    font-size: 9px;
-    padding: 3px 6px;
-    border-radius: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-    width: auto;
-    height: auto;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-  }
-  
-  .benefit-item[style*="cursor: pointer"]:hover::before {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-}
-
-.benefit-item:hover {
+.requirement-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-item:hover::before {
+.requirement-item:hover::before {
   width: 100%;
 }
 
-.benefit-icon {
+.requirement-icon {
   width: 60px;
   height: 60px;
   background-color: rgba(26, 82, 118, 0.08);
@@ -521,24 +435,23 @@
   transition: all 0.3s ease;
 }
 
-.benefit-item:hover .benefit-icon {
+.requirement-item:hover .requirement-icon {
   background-color: rgba(26, 82, 118, 0.12);
   transform: scale(1.05);
 }
 
-.benefit-content {
+.requirement-content {
   flex: 1;
 }
 
-.benefit-content h4 {
+.requirement-content h4 {
   font-size: 18px;
   color: #1a5276;
-  margin-bottom: 12px;
-  font-weight: 600;
-  line-height: 1.4;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-.benefit-item p {
+.requirement-item p {
   font-size: 15px;
   line-height: 1.6;
   color: #555;
@@ -548,27 +461,32 @@
 /* Situations Section */
 .situations {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: #f8fafc;
   position: relative;
+  overflow: hidden;
 }
 
 .situations::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #1a5276, transparent);
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 82, 118, 0.03) 0%, rgba(26, 82, 118, 0) 70%);
 }
 
 .situations-content {
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .situations .section-title {
   color: #1a5276;
+  font-size: 34px;
   margin-bottom: 50px;
 }
 
@@ -576,6 +494,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  margin-bottom: 30px;
 }
 
 .situation-card {
@@ -788,18 +707,19 @@
 
 /* Contact Section */
 .contact {
-  padding: 80px 0;
+  padding: 70px 0;
   background-color: #fff;
+  border-top: 1px solid #eaeaea;
 }
 
 .contact-content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
 .contact-title {
-  font-size: 28px;
+  font-size: 32px;
   color: #1a5276;
   margin-bottom: 20px;
   font-weight: 700;
@@ -807,8 +727,8 @@
 
 .contact-description {
   font-size: 18px;
-  color: #666;
-  margin-bottom: 40px;
+  color: #555;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
@@ -816,36 +736,39 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
 .contact-button {
   display: flex;
   align-items: center;
+  padding: 15px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-decoration: none;
+  justify-content: center;
   background-color: #25D366;
   color: #fff;
   border: none;
-  border-radius: 50px;
-  padding: 16px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 15px rgba(37, 211, 102, 0.25);
-  text-decoration: none;
-  gap: 12px;
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.25);
 }
 
 .contact-button:hover {
   background-color: #128C7E;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 20px rgba(37, 211, 102, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(37, 211, 102, 0.35);
 }
 
 .button-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  margin-left: 12px;
+  text-align: left;
 }
 
 .button-primary {
@@ -859,24 +782,24 @@
 }
 
 .privacy-note {
-  font-size: 12px;
-  color: #999;
-  margin-top: 20px;
-  text-align: center;
+  font-size: 13px;
+  color: #777;
+  margin-top: 30px;
   font-style: italic;
-  max-width: 400px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 /* Trust Section */
 .trust {
-  padding: 60px 0;
-  background-color: #f8f9fa;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eaeaea;
 }
 
 .trust-content {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -884,6 +807,7 @@
 .trust-badges {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -892,23 +816,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #1a5276;
+  padding: 20px;
+  transition: all 0.3s ease;
 }
 
 .badge-icon {
-  font-size: 32px;
+  font-size: 40px;
+  color: #1a5276;
   margin-bottom: 10px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .badge:hover .badge-icon {
   transform: scale(1.1);
+  color: #2980b9;
 }
 
 .badge span {
   font-size: 14px;
-  font-weight: 600;
-  text-align: center;
+  color: #666;
+  font-weight: 500;
 }
 
 /* Responsive Design */
@@ -919,14 +846,15 @@
   
   .hero-content, 
   .information-content,
-  .benefits-content,
+  .requirements-content,
   .situations-content,
-  .faq-content {
+  .faq-content,
+  .contact-content {
     padding: 0 20px;
   }
   
   .hero {
-    padding: 120px 0 80px;
+    padding: 140px 0 80px;
   }
   
   .title {
@@ -959,9 +887,10 @@
     font-size: 16px;
   }
   
-  .benefits-grid,
+  .requirements-grid,
   .situations-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .contact-options {
@@ -975,17 +904,18 @@
   }
   
   .trust-badges {
-    gap: 20px;
+    gap: 30px;
   }
   
   .badge {
+    flex: 1;
     min-width: 120px;
   }
 }
 
 @media (max-width: 576px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 80px 0 50px;
   }
   
   .title {
@@ -1002,7 +932,7 @@
   }
   
   .info-card,
-  .benefit-item,
+  .requirement-item,
   .situation-card,
   .faq-item {
     margin-bottom: 20px;

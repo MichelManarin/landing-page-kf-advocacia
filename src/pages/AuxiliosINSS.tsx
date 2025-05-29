@@ -23,7 +23,8 @@ import {
   FaUserTie,
   FaShieldAlt,
   FaHeart,
-  FaGraduationCap
+  FaGraduationCap,
+  FaExternalLinkAlt
 } from 'react-icons/fa';
 import { RiMentalHealthLine, RiHeartPulseLine } from 'react-icons/ri';
 import { BiBrain } from 'react-icons/bi';
@@ -234,25 +235,29 @@ const AuxiliosINSS = () => {
                 </div>
               </Link>
               
-              <div className={styles["info-card"]}>
-                <h3>
-                  <span className={styles["info-card-icon"]}>
-                    <FaBaby size={22} />
-                  </span>
-                  Salário-Maternidade
-                </h3>
-                <p>Auxílio pago durante o período de <strong>afastamento por maternidade</strong>, adoção ou guarda judicial. Direito garantido a trabalhadoras urbanas, rurais e domésticas.</p>
-              </div>
+              <Link href="/auxilio-maternidade" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaBaby size={22} />
+                    </span>
+                    Salário-Maternidade
+                  </h3>
+                  <p>Auxílio pago durante o período de <strong>afastamento por maternidade</strong>, adoção ou guarda judicial. Direito garantido a trabalhadoras urbanas, rurais e domésticas.</p>
+                </div>
+              </Link>
               
-              <div className={styles["info-card"]}>
-                <h3>
-                  <span className={styles["info-card-icon"]}>
-                    <FaUserTie size={22} />
-                  </span>
-                  Aposentadoria por Idade
-                </h3>
-                <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
-              </div>
+              <Link href="/aposentadoria-idade" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
+                  <h3>
+                    <span className={styles["info-card-icon"]}>
+                      <FaUserTie size={22} />
+                    </span>
+                    Aposentadoria por Idade
+                  </h3>
+                  <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
+                </div>
+              </Link>
             </motion.div>
           </div>
         </section>
@@ -290,15 +295,17 @@ const AuxiliosINSS = () => {
                     </div>
                   </div>
                 </Link>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaUserTie size={32} />
+                <Link href="/aposentadoria-idade" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaUserTie size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>Aposentadoria por Idade</h4>
+                      <p>Para trabalhadores que atingiram a idade mínima e tempo de contribuição</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Aposentadoria por Idade</h4>
-                    <p>Para trabalhadores que atingiram a idade mínima e tempo de contribuição</p>
-                  </div>
-                </div>
+                </Link>
                 <div className={styles["benefit-item"]}>
                   <div className={styles["benefit-icon"]}>
                     <FaCalendarCheck size={32} />
@@ -317,15 +324,17 @@ const AuxiliosINSS = () => {
                     <p>Para trabalhadores permanentemente incapacitados para qualquer atividade</p>
                   </div>
                 </div>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaBaby size={32} />
+                <Link href="/auxilio-maternidade" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaBaby size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>Salário-Maternidade</h4>
+                      <p>Benefício pago durante o período de afastamento por maternidade</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Salário-Maternidade</h4>
-                    <p>Benefício pago durante o período de afastamento por maternidade</p>
-                  </div>
-                </div>
+                </Link>
                 <div className={styles["benefit-item"]}>
                   <div className={styles["benefit-icon"]}>
                     <FaHeart size={32} />
