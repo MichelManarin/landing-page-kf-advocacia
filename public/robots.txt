@@ -1,12 +1,9 @@
-# Robots.txt para karolinefrancisco.com
+# *
 User-agent: *
 Allow: /
-Allow: /advogada-orleans
-Allow: /auxilio-acidente
-Allow: /blog
-Allow: /inss
-Allow: /sobre
-Allow: /contato
 
-# Sitemap
-Sitemap: https://karolinefrancisco.com/sitemap.xml 
+# Host
+Host: https://karolinefrancisco.com
+
+# Sitemaps
+Sitemap: https://karolinefrancisco.com/sitemap.xml
