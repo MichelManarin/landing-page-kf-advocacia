@@ -218,6 +218,7 @@ const AuxiliosINSS = () => {
                       <FaHeartbeat size={22} />
                     </span>
                     Auxílio-Doença
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
                   </h3>
                   <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
                 </div>
@@ -230,6 +231,7 @@ const AuxiliosINSS = () => {
                       <FaUserInjured size={22} />
                     </span>
                     Auxílio-Acidente
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
                   </h3>
                   <p>Benefício mensal pago ao trabalhador que sofreu acidente e ficou com <strong>sequelas permanentes</strong> que reduzem sua capacidade laboral. Pode ser recebido mesmo trabalhando.</p>
                 </div>
@@ -242,6 +244,7 @@ const AuxiliosINSS = () => {
                       <FaBaby size={22} />
                     </span>
                     Salário-Maternidade
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
                   </h3>
                   <p>Auxílio pago durante o período de <strong>afastamento por maternidade</strong>, adoção ou guarda judicial. Direito garantido a trabalhadoras urbanas, rurais e domésticas.</p>
                 </div>
@@ -254,6 +257,7 @@ const AuxiliosINSS = () => {
                       <FaUserTie size={22} />
                     </span>
                     Aposentadoria por Idade
+                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
                   </h3>
                   <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
                 </div>
@@ -279,7 +283,10 @@ const AuxiliosINSS = () => {
                       <FaHeartbeat size={32} />
                     </div>
                     <div className={styles["benefit-content"]}>
-                      <h4>Auxílio-Doença</h4>
+                      <h4>
+                        Auxílio-Doença
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
                       <p>Para quem está temporariamente incapacitado para o trabalho por doença ou acidente</p>
                     </div>
                   </div>
@@ -290,7 +297,10 @@ const AuxiliosINSS = () => {
                       <FaUserInjured size={32} />
                     </div>
                     <div className={styles["benefit-content"]}>
-                      <h4>Auxílio-Acidente</h4>
+                      <h4>
+                        Auxílio-Acidente
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
                       <p>Benefício mensal para quem sofreu acidente e ficou com sequelas permanentes</p>
                     </div>
                   </div>
@@ -301,7 +311,10 @@ const AuxiliosINSS = () => {
                       <FaUserTie size={32} />
                     </div>
                     <div className={styles["benefit-content"]}>
-                      <h4>Aposentadoria por Idade</h4>
+                      <h4>
+                        Aposentadoria por Idade
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
                       <p>Para trabalhadores que atingiram a idade mínima e tempo de contribuição</p>
                     </div>
                   </div>
@@ -330,7 +343,10 @@ const AuxiliosINSS = () => {
                       <FaBaby size={32} />
                     </div>
                     <div className={styles["benefit-content"]}>
-                      <h4>Salário-Maternidade</h4>
+                      <h4>
+                        Salário-Maternidade
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
                       <p>Benefício pago durante o período de afastamento por maternidade</p>
                     </div>
                   </div>

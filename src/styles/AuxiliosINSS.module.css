@@ -274,48 +274,24 @@
 
 /* Indicador de link clicável */
 .info-card[style*="cursor: pointer"]::after {
-  content: '→';
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 18px;
-  color: #1a5276;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-  font-weight: bold;
+  display: none;
 }
 
 .info-card[style*="cursor: pointer"]:hover::after {
-  opacity: 1;
-  transform: translateX(3px);
-  color: #2980b9;
+  display: none;
 }
 
-/* Badge "Clique aqui" para mobile */
-@media (max-width: 768px) {
-  .info-card[style*="cursor: pointer"]::before {
-    content: 'Toque para saber mais';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: linear-gradient(135deg, #1a5276, #2980b9);
-    color: white;
-    font-size: 10px;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-    width: auto;
-    height: auto;
-    opacity: 0.9;
-    transition: all 0.3s ease;
+/* Efeito de pulse sutil para cards clicáveis */
+.info-card[style*="cursor: pointer"] {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
   }
-  
-  .info-card[style*="cursor: pointer"]:hover::before {
-    opacity: 1;
-    transform: scale(1.05);
+  50% {
+    box-shadow: 0 8px 25px rgba(26, 82, 118, 0.15);
   }
 }
 
@@ -470,32 +446,9 @@
   color: #2980b9;
 }
 
-/* Badge "Clique aqui" para mobile nos benefit-items */
-@media (max-width: 768px) {
-  .benefit-item[style*="cursor: pointer"]::before {
-    content: 'Toque aqui';
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: linear-gradient(135deg, #1a5276, #2980b9);
-    color: white;
-    font-size: 9px;
-    padding: 3px 6px;
-    border-radius: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-    width: auto;
-    height: auto;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-  }
-  
-  .benefit-item[style*="cursor: pointer"]:hover::before {
-    opacity: 1;
-    transform: scale(1.05);
-  }
+/* Efeito de pulse sutil para benefit-items clicáveis */
+.benefit-item[style*="cursor: pointer"] {
+  animation: subtlePulse 3s ease-in-out infinite;
 }
 
 .benefit-item:hover {
