@@ -43,11 +43,12 @@ const AuxilioAcidente = () => {
   const section5Ref = useRef(null);
   const section6Ref = useRef(null);
   
-  const section2InView = useInView(section2Ref, { once: true, amount: 0.3 });
-  const section3InView = useInView(section3Ref, { once: true, amount: 0.3 });
-  const section4InView = useInView(section4Ref, { once: true, amount: 0.3 });
-  const section5InView = useInView(section5Ref, { once: true, amount: 0.3 });
-  const section6InView = useInView(section6Ref, { once: true, amount: 0.3 });
+  // Configurações mais responsivas para mobile
+  const section2InView = useInView(section2Ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" });
+  const section3InView = useInView(section3Ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" });
+  const section4InView = useInView(section4Ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" });
+  const section5InView = useInView(section5Ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" });
+  const section6InView = useInView(section6Ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" });
 
   const handleWhatsAppClick = () => {
     // Event snippet for Clique de saída conversion page
