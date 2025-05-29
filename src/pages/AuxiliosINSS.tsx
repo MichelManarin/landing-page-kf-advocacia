@@ -319,24 +319,34 @@ const AuxiliosINSS = () => {
                     </div>
                   </div>
                 </Link>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaCalendarCheck size={32} />
+                <Link href="/aposentadoria-especial" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaCalendarCheck size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>
+                        Aposentadoria Especial
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
+                      <p>Para trabalhadores expostos a agentes nocivos à saúde com tempo reduzido de contribuição</p>
+                    </div>
                   </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Aposentadoria Especial</h4>
-                    <p>Para trabalhadores expostos a agentes nocivos à saúde com tempo reduzido de contribuição</p>
+                </Link>
+                <Link href="/aposentadoria-invalidez" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
+                    <div className={styles["benefit-icon"]}>
+                      <FaWheelchair size={32} />
+                    </div>
+                    <div className={styles["benefit-content"]}>
+                      <h4>
+                        Aposentadoria por Invalidez
+                        <FaExternalLinkAlt size={12} style={{ marginLeft: '8px', opacity: 0.6, color: '#1a5276' }} />
+                      </h4>
+                      <p>Para trabalhadores permanentemente incapacitados para qualquer atividade</p>
+                    </div>
                   </div>
-                </div>
-                <div className={styles["benefit-item"]}>
-                  <div className={styles["benefit-icon"]}>
-                    <FaWheelchair size={32} />
-                  </div>
-                  <div className={styles["benefit-content"]}>
-                    <h4>Aposentadoria por Invalidez</h4>
-                    <p>Para trabalhadores permanentemente incapacitados para qualquer atividade</p>
-                  </div>
-                </div>
+                </Link>
                 <Link href="/auxilio-maternidade" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className={styles["benefit-item"]} style={{ cursor: 'pointer' }}>
                     <div className={styles["benefit-icon"]}>
