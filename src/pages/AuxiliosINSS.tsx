@@ -177,31 +177,53 @@ const AuxiliosINSS = () => {
             <div className={`${styles["shape"]} ${styles["shape-1"]}`}></div>
             <div className={`${styles["shape"]} ${styles["shape-2"]}`}></div>
           </div>
+          <div className={styles["floating-shapes"]}>
+            <div className={styles["floating-shape"]}></div>
+            <div className={styles["floating-shape"]}></div>
+            <div className={styles["floating-shape"]}></div>
+          </div>
           <div className="container">
             <div className={`${styles["hero-content"]} ${isVisible ? styles.visible : ''}`}>
-              <h1 className={styles["title"]}>
-                CONHEÇA TODOS OS BENEFÍCIOS DO INSS QUE VOCÊ TEM DIREITO
-              </h1>
-              <p className={styles["subtitle"]}>
-                O sistema previdenciário brasileiro oferece <strong>diversos benefícios</strong> aos trabalhadores e segurados. Entre eles estão o <em>auxílio-doença</em>, <em>aposentadoria por idade</em>, <strong>auxílio-acidente</strong> e <strong>BPC</strong>. É importante conhecer seus direitos previdenciários para acessá-los adequadamente.
-              </p>
-              <div className={styles["cta-container"]}>
-                <button 
-                  className={styles["cta-button"]}
-                  onClick={handleWhatsAppClick}
-                >
-                  <div className={styles["whatsapp-icon"]}>
-                    <FaWhatsapp size={20} />
-                  </div>
-                  <span>Fale com um advogado</span>
-                </button>
+              <div className={styles["hero-main"]}>
+                <h1 className={styles["title"]}>
+                  CONHEÇA TODOS OS BENEFÍCIOS<br />
+                  <span className={styles["title-highlight"]}>DO INSS QUE VOCÊ TEM DIREITO</span>
+                </h1>
+                <p className={styles["description"]}>
+                  O sistema previdenciário brasileiro oferece <strong>diversos benefícios</strong> aos trabalhadores e segurados. Entre eles estão o <em>auxílio-doença</em>, <em>aposentadoria por idade</em>, <strong>auxílio-acidente</strong> e <strong>BPC</strong>. É importante conhecer seus direitos previdenciários para acessá-los adequadamente.
+                </p>
+                <div className={styles["cta-container"]}>
+                  <button 
+                    className={styles["cta-button"]}
+                    onClick={handleWhatsAppClick}
+                  >
+                    <span>Conversar com especialista</span>
+                    <div className={styles["button-arrow"]}>
+                      <FaArrowRight size={16} />
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
+        {/* Separador Decorativo */}
+        <div className={styles["section-separator"]}>
+          <div className={styles["decorative-line"]}></div>
+        </div>
+
         {/* Seção 2 - Informações sobre os benefícios */}
         <section className={styles["information"]} ref={section2Ref}>
+          <div className={styles["hero-bg"]}>
+            <div className={`${styles["shape"]} ${styles["shape-1"]}`}></div>
+            <div className={`${styles["shape"]} ${styles["shape-2"]}`}></div>
+          </div>
+          <div className={styles["floating-shapes"]}>
+            <div className={styles["floating-shape"]}></div>
+            <div className={styles["floating-shape"]}></div>
+            <div className={styles["floating-shape"]}></div>
+          </div>
           <div className="container">
             <motion.div 
               className={styles["information-content"]}
@@ -211,86 +233,91 @@ const AuxiliosINSS = () => {
             >
               <h2 className={styles["section-title"]} style={{ color: '#1a5276' }}>PRINCIPAIS BENEFÍCIOS DO INSS</h2>
               
-              <Link href="/auxilio-doenca" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaHeartbeat size={22} />
-                    </span>
-                    Auxílio-Doença
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
-                </div>
-              </Link>
-              
-              <Link href="/auxilio-acidente" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaUserInjured size={22} />
-                    </span>
-                    Auxílio-Acidente
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Benefício mensal pago ao trabalhador que sofreu acidente e ficou com <strong>sequelas permanentes</strong> que reduzem sua capacidade laboral. Pode ser recebido mesmo trabalhando.</p>
-                </div>
-              </Link>
-              
-              <Link href="/auxilio-maternidade" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaBaby size={22} />
-                    </span>
-                    Salário-Maternidade
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Auxílio pago durante o período de <strong>afastamento por maternidade</strong>, adoção ou guarda judicial. Direito garantido a trabalhadoras urbanas, rurais e domésticas.</p>
-                </div>
-              </Link>
-              
-              <Link href="/aposentadoria-idade" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaUserTie size={22} />
-                    </span>
-                    Aposentadoria por Idade
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
-                </div>
-              </Link>
-              
-              <Link href="/bpc-loas" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaHeart size={22} />
-                    </span>
-                    BPC LOAS
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Benefício assistencial de <strong>um salário mínimo</strong> para idosos a partir de 65 anos e pessoas com deficiência de baixa renda. Não exige contribuição prévia ao INSS.</p>
-                </div>
-              </Link>
-              
-              <Link href="/pensao-morte" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className={styles["info-card"]} style={{ cursor: 'pointer' }}>
-                  <h3>
-                    <span className={styles["info-card-icon"]}>
-                      <FaHome size={22} />
-                    </span>
-                    Pensão por Morte
-                    <FaExternalLinkAlt size={14} style={{ marginLeft: 'auto', opacity: 0.6, color: '#1a5276' }} />
-                  </h3>
-                  <p>Benefício previdenciário pago aos <strong>dependentes do segurado falecido</strong>. Protege financeiramente cônjuges, filhos e outros dependentes habilitados.</p>
-                </div>
-              </Link>
+              <div className={styles["benefits-cards-grid"]}>
+                <Link href="/auxilio-doenca" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-red"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaHeartbeat size={32} />
+                    </div>
+                    <h3>Auxílio-Doença</h3>
+                    <p>Benefício temporário pago ao segurado que fica <strong>incapacitado para o trabalho</strong> por mais de 15 dias devido a doença ou acidente. É necessário passar por perícia médica do INSS.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/aposentadoria-idade" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-teal"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaUserTie size={32} />
+                    </div>
+                    <h3>Aposentadoria por Idade</h3>
+                    <p>Benefício permanente para trabalhadores que atingiram a <strong>idade mínima</strong> (65 anos homens, 62 anos mulheres) e cumpriram o tempo mínimo de contribuição de 15 anos.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/auxilio-acidente" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-blue"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaUserInjured size={32} />
+                    </div>
+                    <h3>Auxílio-Acidente</h3>
+                    <p>Benefício mensal pago ao trabalhador que sofreu acidente e ficou com <strong>sequelas permanentes</strong> que reduzem sua capacidade laboral. Pode ser recebido mesmo trabalhando.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/bpc-loas" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-light-blue"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaHeart size={32} />
+                    </div>
+                    <h3>BPC LOAS</h3>
+                    <p>Benefício assistencial de <strong>um salário mínimo</strong> para idosos a partir de 65 anos e pessoas com deficiência de baixa renda. Não exige contribuição prévia ao INSS.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/auxilio-maternidade" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-purple"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaBaby size={32} />
+                    </div>
+                    <h3>Salário-Maternidade</h3>
+                    <p>Auxílio pago durante o período de <strong>afastamento por maternidade</strong>, adoção ou guarda judicial. Direito garantido a trabalhadoras urbanas, rurais e domésticas.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+
+                <Link href="/pensao-morte" style={{ textDecoration: 'none' }}>
+                  <div className={`${styles["benefit-card"]} ${styles["benefit-card-green"]}`}>
+                    <div className={styles["benefit-card-icon"]}>
+                      <FaHome size={32} />
+                    </div>
+                    <h3>Pensão por Morte</h3>
+                    <p>Benefício previdenciário pago aos <strong>dependentes do segurado falecido</strong>. Protege financeiramente cônjuges, filhos e outros dependentes habilitados.</p>
+                    <div className={styles["benefit-card-link"]}>
+                      Verificar direitos <FaArrowRight size={14} />
+                    </div>
+                  </div>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>
+
+        {/* Efeito de Onda */}
+        <div className={styles["wave-effect"]}></div>
 
         {/* Seção 3 - Tipos de Auxílios */}
         <section className={styles["benefits"]} ref={section3Ref}>
@@ -422,6 +449,10 @@ const AuxiliosINSS = () => {
 
         {/* Seção 4 - Situações Comuns */}
         <section className={styles["situations"]} ref={section4Ref}>
+          <div className={styles["floating-shapes"]}>
+            <div className={styles["floating-shape"]}></div>
+            <div className={styles["floating-shape"]}></div>
+          </div>
           <div className="container">
             <motion.div 
               className={styles["situations-content"]}
@@ -456,6 +487,11 @@ const AuxiliosINSS = () => {
             </motion.div>
           </div>
         </section>
+
+        {/* Separador com Pattern */}
+        <div className={`${styles["section-separator"]} ${styles["pattern-bg"]}`}>
+          <div className={styles["decorative-line"]}></div>
+        </div>
 
         {/* Seção 5 - FAQ */}
         <section className={styles["faq"]} ref={section5Ref}>
@@ -510,7 +546,6 @@ const AuxiliosINSS = () => {
             </motion.div>
           </div>
         </section>
-
 
       </main>
     </Layout>
