@@ -59,9 +59,6 @@ const Hero = () => {
                 height={600}
                 priority
               />
-              <div className="oab-discrete">
-                OAB/SC 64.256
-              </div>
             </div>
           </div>
         </div>
