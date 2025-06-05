@@ -1,6 +1,7 @@
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp, FaShieldAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,30 +48,18 @@ const Hero = () => {
               <div className="button-arrow">→</div>
             </button>
           </div>
-          
-          <div className={`md:w-1/2 flex justify-center hero-card-container ${isVisible ? 'visible' : ''}`}>
-            <div className="hero-card">
-              <div className="card-header">
-                <h2 className="text-2xl font-bold text-secondary">Atendimento Personalizado</h2>
-                <div className="card-decoration"></div>
-              </div>
-              
-              <ul className="feature-list">
-                <li className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div className="feature-text">Análise detalhada do seu caso</div>
-                </li>
-                <li className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div className="feature-text">Acompanhamento em todas as etapas</div>
-                </li>
-                <li className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div className="feature-text">Comunicação clara e objetiva</div>
-                </li>
-              </ul>
-              
-              <div className="card-badge">
+
+          <div className={`md:w-1/2 flex justify-center hero-image-section ${isVisible ? 'visible' : ''}`}>
+            <div className="lawyer-photo-modern">
+              <Image 
+                src="/assets/karoline.png" 
+                alt="Karoline Francisco - Advogada OAB/SC 64.256" 
+                className="lawyer-image"
+                width={400}
+                height={600}
+                priority
+              />
+              <div className="oab-discrete">
                 OAB/SC 64.256
               </div>
             </div>

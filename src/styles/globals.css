@@ -1290,13 +1290,13 @@ footer {
 
 .oab-badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  border-radius: 30px;
-  font-size: 0.8rem;
+  background: #363f4b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(54, 63, 75, 0.25);
 }
 
 /* Footer bottom */
@@ -3372,5 +3372,552 @@ footer {
   
   .faq-answer {
     padding: 0 15px 15px 45px;
+  }
+}
+
+/* Hero Image Container - Substituindo hero-card */
+.hero-image-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-image-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-image-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+  transition: all 0.4s ease;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(37, 99, 235, 0.08);
+}
+
+.hero-image-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(37, 99, 235, 0.03) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.hero-image-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.15);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.karoline-image-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px;
+}
+
+.karoline-hero-photo {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.12);
+  transition: all 0.4s ease;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+}
+
+.hero-image-card:hover .karoline-hero-photo {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18);
+}
+
+.hero-image-info {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.lawyer-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+  font-family: 'EB Garamond', serif;
+}
+
+.lawyer-title {
+  font-size: 16px;
+  color: var(--gray-600);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.oab-badge {
+  display: inline-block;
+  background-color: #363f4b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive Design for Hero Image */
+@media (max-width: 768px) {
+  .hero-image-card {
+    max-width: 320px;
+    padding: 24px;
+    margin: 0 auto;
+  }
+  
+  .karoline-hero-photo {
+    max-width: 240px;
+  }
+  
+  .lawyer-name {
+    font-size: 22px;
+  }
+  
+  .lawyer-title {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   MODERN HERO SECTION REDESIGN
+   ========================================= */
+
+.hero-modern {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: linear-gradient(160deg, #ffffff 0%, #f8f8f8 100%);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+/* Hero Content Styles */
+.hero-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.hero-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(217, 179, 179, 0.1);
+  color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-left: 3px solid var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.badge-icon {
+  font-size: 1rem;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.title-highlight {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.title-highlight::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: rgba(217, 179, 179, 0.3);
+  z-index: -1;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--gray-700);
+  margin-bottom: 2rem;
+}
+
+.location-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.location-link:hover {
+  border-bottom-color: var(--primary-color);
+}
+
+/* Hero Lawyer Section */
+.hero-lawyer-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-lawyer-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lawyer-photo-container {
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 350px;
+}
+
+.lawyer-photo {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.12);
+  transition: all 0.4s ease;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+}
+
+.lawyer-photo-container:hover .lawyer-photo {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.18);
+}
+
+.lawyer-info-overlay {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.lawyer-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-family: 'EB Garamond', serif;
+}
+
+.lawyer-title {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.lawyer-credentials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.credential-badge {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Trust Indicators */
+.trust-indicators {
+  width: 100%;
+  max-width: 300px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.trust-icon {
+  width: 20px;
+  height: 20px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .hero-modern {
+    padding: 100px 0 60px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.875rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .lawyer-photo-container {
+    max-width: 280px;
+  }
+  
+  .lawyer-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-modern {
+    padding: 80px 0 40px;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Hero Image Section - Modern and Clean */
+.hero-image-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-image-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.lawyer-photo-modern {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+  border-radius: 24px;
+  transition: all 0.4s ease;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+.lawyer-photo-modern::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, transparent, rgba(217, 179, 179, 0.2), transparent, rgba(90, 74, 66, 0.1), transparent);
+  border-radius: 28px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: rotateBorder 6s linear infinite;
+}
+
+.lawyer-photo-modern:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color), var(--secondary-color));
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(217, 179, 179, 0.3);
+}
+
+.lawyer-photo-modern:hover::before {
+  opacity: 1;
+}
+
+.lawyer-image {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  object-fit: cover;
+  filter: brightness(1.02) contrast(1.05);
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.lawyer-photo-modern:hover .lawyer-image {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05) contrast(1.08);
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(217, 179, 179, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(217, 179, 179, 0.5), 0 0 40px rgba(90, 74, 66, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(217, 179, 179, 0.3);
+  }
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-image-section {
+    margin-top: 2rem;
+  }
+  
+  .lawyer-photo-modern {
+    max-width: 280px;
+    padding: 3px;
+    animation: borderGlowMobile 4s ease-in-out infinite alternate;
+  }
+  
+  .lawyer-photo-modern::before {
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 23px;
+  }
+  
+  .oab-discrete {
+    bottom: 15px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@keyframes borderGlowMobile {
+  0% {
+    box-shadow: 0 0 15px rgba(217, 179, 179, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(217, 179, 179, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(217, 179, 179, 0.2);
+  }
+}
+
+/* OAB Information - Discrete and Elegant */
+.oab-discrete {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(217, 179, 179, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0.95;
+  z-index: 3;
+  display: inline-block;
+}
+
+.lawyer-photo-modern:hover .oab-discrete {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-image-section {
+    margin-top: 2rem;
+  }
+  
+  .lawyer-photo-modern {
+    max-width: 280px;
+  }
+  
+  .oab-discrete {
+    top: 15px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }

@@ -1535,4 +1535,182 @@
   right: 0;
   bottom: 0;
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+/* Credibility Section */
+.credibility {
+  padding: 100px 0 80px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  min-height: 60vh;
+}
+
+.credibility-content {
+  position: relative;
+  z-index: 1;
+}
+
+.credibility-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.credibility-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.karoline-photo {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+  transition: all 0.4s ease;
+  border: 3px solid #ffffff;
+  object-fit: cover;
+}
+
+.credibility-image:hover .karoline-photo {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(37, 99, 235, 0.2);
+}
+
+.credibility-text {
+  padding: 20px 0;
+}
+
+.credibility-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.credibility-description strong {
+  color: #1a365d;
+  font-weight: 700;
+}
+
+.credibility-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #1a365d;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.highlight-icon {
+  color: #2563eb;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.credibility-cta {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 18px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+  gap: 12px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.credibility-cta:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsive Design for Credibility Section */
+@media (max-width: 968px) {
+  .credibility-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .credibility-image {
+    order: 1;
+  }
+  
+  .credibility-text {
+    order: 2;
+  }
+  
+  .karoline-photo {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .credibility {
+    padding: 80px 0 60px;
+  }
+  
+  .credibility-grid {
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .credibility-description {
+    font-size: 16px;
+  }
+  
+  .credibility-highlights {
+    gap: 12px;
+  }
+  
+  .highlight-item {
+    font-size: 15px;
+  }
+  
+  .credibility-cta {
+    padding: 16px 28px;
+    font-size: 15px;
+  }
+}
+
+.oab-info {
+  margin-top: 24px;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: 12px;
+  border-left: 4px solid #2563eb;
+  display: inline-block;
+}
+
+.oab-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a365d;
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
 } 

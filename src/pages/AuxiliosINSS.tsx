@@ -34,6 +34,7 @@ import { IoMdMedical } from 'react-icons/io';
 import { motion, useInView } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '@/components/Layout';
 import styles from '../styles/AuxiliosINSS.module.css';
 
@@ -213,8 +214,8 @@ const AuxiliosINSS = () => {
           <div className={styles["decorative-line"]}></div>
         </div>
 
-        {/* Seção 2 - Informações sobre os benefícios */}
-        <section className={styles["information"]} ref={section2Ref}>
+        {/* Seção de Credibilidade - Nova */}
+        <section className={styles["credibility"]} ref={section4Ref}>
           <div className={styles["hero-bg"]}>
             <div className={`${styles["shape"]} ${styles["shape-1"]}`}></div>
             <div className={`${styles["shape"]} ${styles["shape-2"]}`}></div>
@@ -224,6 +225,48 @@ const AuxiliosINSS = () => {
             <div className={styles["floating-shape"]}></div>
             <div className={styles["floating-shape"]}></div>
           </div>
+          <div className="container">
+            <motion.div 
+              className={styles["credibility-content"]}
+              initial={{ opacity: 0, y: 50 }}
+              animate={section4InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className={styles["credibility-grid"]}>
+                <div className={styles["credibility-image"]}>
+                  <Image 
+                    src="/assets/karoline.png" 
+                    alt="Karoline Francisco - Advogada especialista em Direito Previdenciário" 
+                    className={styles["karoline-photo"]}
+                    width={400}
+                    height={600}
+                    priority
+                  />
+                </div>
+                <div className={styles["credibility-text"]}>
+                  <h2 className={styles["section-title"]} style={{ textAlign: 'left', marginBottom: '24px' }}>
+                    ESPECIALISTA EM<br />
+                    <span style={{ color: '#2563eb' }}>DIREITO PREVIDENCIÁRIO</span>
+                  </h2>
+                  <p className={styles["credibility-description"]}>
+                    <strong>Karoline Francisco</strong> é advogada especializada em Direito Previdenciário com ampla experiência em casos complexos junto ao INSS. Atua há anos defendendo os direitos dos segurados e possui expertise em todas as modalidades de benefícios previdenciários.
+                  </p>
+                  <div className={styles["oab-info"]}>
+                    <span className={styles["oab-text"]}>OAB/SC 64.256</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Separador com Pattern */}
+        <div className={`${styles["section-separator"]} ${styles["pattern-bg"]}`}>
+          <div className={styles["decorative-line"]}></div>
+        </div>
+
+        {/* Seção 2 - Informações sobre benefícios */}
+        <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
             <motion.div 
               className={styles["information-content"]}
@@ -448,7 +491,7 @@ const AuxiliosINSS = () => {
         </section>
 
         {/* Seção 4 - Situações Comuns */}
-        <section className={styles["situations"]} ref={section4Ref}>
+        <section className={styles["situations"]} ref={section5Ref}>
           <div className={styles["floating-shapes"]}>
             <div className={styles["floating-shape"]}></div>
             <div className={styles["floating-shape"]}></div>
@@ -457,7 +500,7 @@ const AuxiliosINSS = () => {
             <motion.div 
               className={styles["situations-content"]}
               initial={{ opacity: 0, y: 50 }}
-              animate={section4InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={section5InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
               <h2 className={styles["section-title"]}>QUANDO PROCURAR SEUS DIREITOS</h2>
@@ -488,18 +531,13 @@ const AuxiliosINSS = () => {
           </div>
         </section>
 
-        {/* Separador com Pattern */}
-        <div className={`${styles["section-separator"]} ${styles["pattern-bg"]}`}>
-          <div className={styles["decorative-line"]}></div>
-        </div>
-
         {/* Seção 5 - FAQ */}
-        <section className={styles["faq"]} ref={section5Ref}>
+        <section className={styles["faq"]} ref={section6Ref}>
           <div className="container">
             <motion.div 
               className={styles["faq-content"]}
               initial={{ opacity: 0, y: 50 }}
-              animate={section5InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              animate={section6InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6 }}
             >
               <h2 className={styles["section-title"]}>PERGUNTAS FREQUENTES</h2>
