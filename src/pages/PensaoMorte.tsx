@@ -148,6 +148,38 @@ const PensaoMorte = () => {
         />
       </Head>
       <main className={styles["page"]}>
+        {/* Seção Hero - Simples e elegante */}
+        <section className={styles["hero"]}>
+          <div className="container">
+            <motion.div 
+              className={styles["hero-content"]}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className={styles["hero-text"]}>
+                <h1 className={styles["title"]}>
+                  Pensão por Morte INSS
+                </h1>
+                <p className={styles["subtitle"]}>
+                  Perdeu um familiar segurado do INSS? Você pode ter direito à pensão por morte. 
+                  Entenda como funciona este benefício para dependentes e quais são os requisitos necessários.
+                </p>
+              </div>
+              
+              <div className={styles["hero-image"]}>
+                <div className={styles["image-container"]}>
+                  <img 
+                    src="/assets/pensao-por-morte.png" 
+                    alt="Pensão por Morte - Benefício para dependentes do INSS" 
+                    className={styles["hero-img"]}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
