@@ -145,6 +145,39 @@ const AposentadoriaEspecial = () => {
         />
       </Head>
       <main className={styles["page"]}>
+        {/* Seção Hero - Simples e elegante */}
+        <section className={styles["hero"]}>
+          <div className="container">
+            <motion.div 
+              className={styles["hero-content"]}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className={styles["hero-text"]}>
+                <h1 className={styles["title"]}>
+                  Aposentadoria Especial INSS
+                </h1>
+                <p className={styles["subtitle"]}>
+                  Trabalhou exposto a agentes nocivos? Você pode ter direito à aposentadoria com tempo reduzido de contribuição. 
+                  Entenda como funciona este benefício previdenciário e quais são os requisitos necessários.
+                </p>
+              </div>
+              
+              <div className={styles["hero-image"]}>
+                <div className={styles["image-container"]}>
+                  {/* Aqui você pode colocar a imagem gerada no ChatGPT */}
+                  <img 
+                    src="/assets/aposentadoria-especial.png" 
+                    alt="Aposentadoria Especial - Trabalhador com equipamentos de proteção" 
+                    className={styles["hero-img"]}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
