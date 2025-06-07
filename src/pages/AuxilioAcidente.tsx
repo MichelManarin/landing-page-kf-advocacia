@@ -142,6 +142,38 @@ const AuxilioAcidente = () => {
         />
       </Head>
       <main className={styles["page"]}>
+        {/* Seção Hero - Simples e elegante */}
+        <section className={styles["hero"]}>
+          <div className="container">
+            <motion.div 
+              className={styles["hero-content"]}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className={styles["hero-text"]}>
+                <h1 className={styles["title"]}>
+                  Auxílio-Acidente INSS
+                </h1>
+                <p className={styles["subtitle"]}>
+                  Sofreu um acidente e ficou com sequelas? Você pode ter direito ao auxílio-acidente mesmo continuando a trabalhar. 
+                  Entenda como funciona este benefício previdenciário e quais são os requisitos necessários.
+                </p>
+              </div>
+              
+              <div className={styles["hero-image"]}>
+                <div className={styles["image-container"]}>
+                  <img 
+                    src="/assets/auxilio-acidente.png" 
+                    alt="Auxílio-Acidente - Trabalhador com sequelas de acidente" 
+                    className={styles["hero-img"]}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
