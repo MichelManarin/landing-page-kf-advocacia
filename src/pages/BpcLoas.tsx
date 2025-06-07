@@ -146,6 +146,38 @@ const BpcLoas = () => {
         />
       </Head>
       <main className={styles["page"]}>
+        {/* Seção Hero - Simples e elegante */}
+        <section className={styles["hero"]}>
+          <div className="container">
+            <motion.div 
+              className={styles["hero-content"]}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className={styles["hero-text"]}>
+                <h1 className={styles["title"]}>
+                  BPC LOAS
+                </h1>
+                <p className={styles["subtitle"]}>
+                  É idoso ou pessoa com deficiência de baixa renda? Você pode ter direito ao BPC LOAS, 
+                  benefício assistencial de um salário mínimo. Entenda como funciona e quais são os requisitos.
+                </p>
+              </div>
+              
+              <div className={styles["hero-image"]}>
+                <div className={styles["image-container"]}>
+                  <img 
+                    src="/assets/loas.png" 
+                    alt="BPC LOAS - Benefício assistencial para idosos e pessoas com deficiência" 
+                    className={styles["hero-img"]}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">

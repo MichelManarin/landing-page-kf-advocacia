@@ -146,6 +146,38 @@ const AuxilioMaternidade = () => {
         />
       </Head>
       <main className={styles["page"]}>
+        {/* Seção Hero - Simples e elegante */}
+        <section className={styles["hero"]}>
+          <div className="container">
+            <motion.div 
+              className={styles["hero-content"]}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <div className={styles["hero-text"]}>
+                <h1 className={styles["title"]}>
+                  Salário-Maternidade INSS
+                </h1>
+                <p className={styles["subtitle"]}>
+                  Está grávida, teve um bebê ou adotou uma criança? Você pode ter direito ao salário-maternidade do INSS. 
+                  Entenda como funciona este benefício e quais são os requisitos necessários.
+                </p>
+              </div>
+              
+              <div className={styles["hero-image"]}>
+                <div className={styles["image-container"]}>
+                  <img 
+                    src="/assets/salario-maternidade.png" 
+                    alt="Salário-Maternidade - Benefício para mães e adotantes" 
+                    className={styles["hero-img"]}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Seção 2 - Informações sobre o benefício */}
         <section className={styles["information"]} ref={section2Ref}>
           <div className="container">
